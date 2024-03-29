@@ -9,7 +9,7 @@ const domain = 'https://gitee.com'
 const tags = ['程序员', '编程', '前端']
 
 export default defineConfig({
-  base: '/',
+  base: '/web-blogs/',
   title: 'onresize的笔记',
   description: '',
   head: [
