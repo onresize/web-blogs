@@ -9,7 +9,7 @@ const domain = 'https://onresize.github.io/web-blogs/'
 const tags = ['程序员', '编程', '前端']
 
 export default defineConfig({
-  base: '/web-blogs/',
+  base: '/web-blogs/docs/',
   title: 'onresize',
   description: '',
   head: [
