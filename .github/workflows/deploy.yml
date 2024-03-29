@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vuepress/dist/docs
+          path: docs/.vuepress/dist
 
   # Deployment job
   deploy:
