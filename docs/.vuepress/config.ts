@@ -5,7 +5,7 @@ import footer from './footer'
 import extraSideBar from './extraSideBar'
 
 const author = 'onresize'
-const domain = 'https://gitee.com'
+const domain = 'https://onresize.github.io/web-blogs/'
 const tags = ['程序员', '编程', '前端']
 
 export default defineConfig({
@@ -31,10 +31,10 @@ export default defineConfig({
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?907fc6c6099a87f6c010a6b5cd433d61";
+        hm.src = "https://hm.baidu.com/hm.js?9eb20a946f6ada6ace9bb2de590f8ed3";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
-      })();    
+      })();  
       `,
     ],
   ],
@@ -52,9 +52,9 @@ export default defineConfig({
     ['@vuepress/back-to-top'],
     // Google 分析
     [
-      "@vuepress/google-analytics",
+      '@vuepress/google-analytics',
       {
-        ga: "G-P1NFFNHRH2", // 补充自己的谷歌分析 ID，比如 UA-00000000-0
+        ga: 'G-P1NFFNHRH2', // 补充自己的谷歌分析 ID，比如 UA-00000000-0
       },
     ],
     ['@vuepress/medium-zoom'],
@@ -117,11 +117,12 @@ export default defineConfig({
     logo: '/image.png',
     nav: navbar,
     sidebar,
-    lastUpdated: '最近更新',
-
+    lastUpdated: '上一次更新',
     // GitHub 仓库位置
     repo: 'onresize/web-blogs',
     docsBranch: 'main',
+
+    smoothScroll: true
 
     // 编辑链接
     // editLinks: true,

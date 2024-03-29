@@ -26,10 +26,12 @@
       </template>
     </Page>
 
-    <PageSidebar v-if="shouldShowPageSidebar" :page-sidebar-items="pageSidebarItems" :sidebar-items="sidebarItems">
+    <!-- <PageSidebar v-if="shouldShowPageSidebar" :page-sidebar-items="pageSidebarItems" :sidebar-items="sidebarItems">
       <slot name="page-sidebar-top" #top />
       <slot name="page-sidebar-bottom" #bottom />
-    </PageSidebar>
+    </PageSidebar> -->
+
+    <div id="fps"></div>
   </div>
 </template>
 
@@ -41,6 +43,7 @@ import Sidebar from '@theme/components/Sidebar.vue'
 import PageSidebar from '@theme/components/ExtraSidebar.vue'
 import Footer from "@theme/components/Footer.vue";
 import { resolveSidebarItems, resolveHeaders } from '../util'
+import { loopFps } from '../util/fps'
 
 
 export default {
@@ -117,6 +120,7 @@ export default {
 
   mounted() {
     // console.log(config,this.pageSidebarItems, 'config')
+    loopFps()
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
@@ -150,3 +154,25 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+#fps
+ position fixed
+ right 0
+ bottom 5px
+ box-sizing border-box
+ padding 0 6px
+ width 120px
+ text-align center
+ user-select none
+
+::-webkit-scrollbar 
+	width 8px
+	height 8px
+	background-color #ffffff
+
+::-webkit-scrollbar-thumb 
+	background-color #dddee0
+	border-radius 20px
+	box-shadow inset 0 0 0 #ffffff
+</style>

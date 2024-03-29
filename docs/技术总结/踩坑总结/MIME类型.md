@@ -1,3 +1,7 @@
+---
+title: MIME类型
+lang: zh-CN
+---
 # MIME类型
 >
 > 本文作者：[onresize](https://github.com/onresize)

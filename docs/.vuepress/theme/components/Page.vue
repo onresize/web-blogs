@@ -33,11 +33,13 @@
 import PageEdit from '@theme/components/PageEdit.vue'
 import PageNav from '@theme/components/PageNav.vue'
 import PageSidebarToc from '@theme/components/PageSidebarToc.vue'
+import { devDependencies } from '../../../../package.json'
 export default {
   components: { PageEdit, PageNav, PageSidebarToc },
   props: ['sidebarItems', 'pageSidebarItems'],
   mounted() {
-    console.log(this.$site, this, 'this.$site')
+    // console.log(this.$site, this, 'this.$site')
+    console.log(`%cvuepress:%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
   }
 }
 </script>

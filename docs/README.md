@@ -1,5 +1,6 @@
 ---
 permalink: /
+lang: zh-CN
 ---
 
 ```js
