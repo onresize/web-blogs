@@ -49,7 +49,7 @@ treer -e 'directoryList.md'
 treer -i 'node_modules' -e 'directoryList.md'
 ```
 
-`方法善：tree命令`
+- #### `方法三：tree命令`
 
 ```js
 // 当前目录生成到根目录下list.txt

@@ -10,7 +10,7 @@ const tags = ['程序员', '编程', '前端']
 
 export default defineConfig({
   base: '/web-blogs/',
-  title: 'onresize的笔记',
+  title: 'onresize',
   description: '',
   head: [
     // 站点图标
@@ -92,13 +92,6 @@ export default defineConfig({
     ['vuepress-plugin-baidu-autopush'],
     // https://github.com/zq99299/vuepress-plugin/tree/master/vuepress-plugin-tags
     ['vuepress-plugin-tags'],
-    // https://github.com/znicholasbrown/vuepress-plugin-code-copy
-    [
-      'vuepress-plugin-code-copy',
-      {
-        successText: '代码已复制',
-      },
-    ],
     // https://github.com/webmasterish/vuepress-plugin-feed
     [
       'feed',
@@ -111,6 +104,15 @@ export default defineConfig({
     ],
     // https://github.com/tolking/vuepress-plugin-img-lazy
     ['img-lazy'],
+    // https://github.com/moefyit/vuepress-plugin-cursor-effects
+    [
+      'cursor-effects',
+      {
+        size: 2, // size of the particle, default: 2
+        shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
+        zIndex: 999999999, // z-index property of the canvas, default: 999999999
+      },
+    ],
   ],
   // 主题配置
   themeConfig: {
@@ -121,8 +123,9 @@ export default defineConfig({
     // GitHub 仓库位置
     repo: 'onresize/web-blogs',
     docsBranch: 'main',
+    repoLabel: '📦️GitHub',
 
-    smoothScroll: true
+    smoothScroll: true,
 
     // 编辑链接
     // editLinks: true,

@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <slot name="bottom" />
+    <!-- <slot name="bottom" /> -->
   </main>
 </template>
 

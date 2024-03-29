@@ -167,12 +167,15 @@ export default {
  user-select none
 
 ::-webkit-scrollbar 
-	width 8px
-	height 8px
-	background-color #ffffff
+	width 6px
+	height 6px
+	background-color #282C34
 
 ::-webkit-scrollbar-thumb 
-	background-color #dddee0
-	border-radius 20px
-	box-shadow inset 0 0 0 #ffffff
+	 background-color #3eaf7c
+	 border-radius 20px
+	 box-shadow inset 0 0 0 #ffffff
+
+::selection
+  background rgb(255 145 0.1)
 </style>

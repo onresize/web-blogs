@@ -1,5 +1,5 @@
 <template>
-    <main class="footer">
+    <main class="footer" v-if="false">
         <div v-for="(item, index) in footerList" :key="index" class="footer-item">
             <a :href="item.href" target="_blank" rel="noopener noreferrer">
                 <img v-if="item.icon" :src="item.icon" alt="icon" class="item-icon" />
@@ -37,14 +37,11 @@ export default {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
-//@media (max-width: $MQMobile)
-//  .footer-item a
-//    margin-right 0 !important
 .footer
   padding 2rem 0
   display flex
   justify-content center
-  background-color #f0f2f5
+  background-color #fff
   flex-wrap wrap
 .footer-item
   padding 0 1rem
