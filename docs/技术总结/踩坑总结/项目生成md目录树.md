@@ -1,6 +1,9 @@
 ---
 title: 项目生成md目录树
 lang: zh-CN
+feed:
+  enable: true
+description: 项目生成md目录树
 ---
 # 项目生成md目录树
 >

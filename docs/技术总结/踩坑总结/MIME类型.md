@@ -1,6 +1,9 @@
 ---
 title: MIME类型
 lang: zh-CN
+feed:
+  enable: true
+description: MIME类型
 ---
 # MIME类型
 >

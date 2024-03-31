@@ -1,13 +1,16 @@
 ---
 title: TS入门到进阶
 lang: zh-CN
+feed:
+  enable: true
+description: TS入门到进阶
 ---
 
 # TS 入门到进阶
 
 > 本文作者：[onresize](https://github.com/onresize)
 
-- ## 入门
+### [入门]
   [在线学习 TS](https://www.typescriptlang.org/play)
 
 ```ts
@@ -199,7 +202,7 @@ type TodoPreview1= Omit<Todo, "desc">
 ```
 
 
-- ## 进阶
+### [进阶]
 
 ```ts
 // TODO:

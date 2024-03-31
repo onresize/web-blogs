@@ -1,6 +1,9 @@
 ---
 title: CICD相关
 lang: zh-CN
+feed:
+  enable: true
+description: CICD相关
 ---
 
 # TS CICD相关
