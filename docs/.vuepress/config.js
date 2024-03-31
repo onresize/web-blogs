@@ -19,7 +19,34 @@ export default defineUserConfig({
   lang: 'zh-CN',
 
   title: 'onresize',
-  description: '',
+  description: '💻学习📝记录🔗分享',
+
+  head: [
+    // 站点图标
+    ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
+    // SEO
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'onresize的笔记, 博客',
+      },
+    ],
+    // 百度统计
+    [
+      'script',
+      {},
+      `
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9eb20a946f6ada6ace9bb2de590f8ed3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();  
+    `,
+    ],
+  ],
 
   markdown: {
     code: {
@@ -32,39 +59,20 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: '/image.png',
 
-    lastUpdated: true,
+    lastUpdatedText: '上次更新',
+    contributorsText: '贡献者',
+    notFound: [
+      '这里什么都没有',
+      '我们怎么到这来了？',
+      '这是一个 404 页面',
+      '看起来我们进入了错误的链接',
+    ],
+    backToHome: '返回首页',
 
     // GitHub 仓库位置
     repo: 'onresize/web-blogs',
     docsBranch: 'main',
     repoLabel: '📦️GitHub',
-
-    head: [
-      // 站点图标
-      ['link', { rel: 'icon', href: '/image.png' }],
-      // SEO
-      [
-        'meta',
-        {
-          name: 'keywords',
-          content: 'onresize的笔记, 博客',
-        },
-      ],
-      // 百度统计
-      [
-        'script',
-        {},
-        `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?9eb20a946f6ada6ace9bb2de590f8ed3";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();  
-      `,
-      ],
-    ],
 
     docsDir: 'docs',
 
@@ -79,59 +87,5 @@ export default defineUserConfig({
       // 排除首页
       isSearchable: (page) => page.path !== '/',
     }),
-    // RSS订阅源
-    [
-      'feed',
-      {
-        canonical_base: 'https://onresize.github.io',
-        count: 5000,
-      },
-    ],
-    // https://github.com/ekoeryanto/vuepress-plugin-sitemap
-    [
-      'sitemap',
-      {
-        hostname: domain,
-      },
-    ],
-    // Google 分析
-    [
-      '@vuepress/google-analytics',
-      {
-        ga: 'G-P1NFFNHRH2', // 补充自己的谷歌分析 ID，比如 UA-00000000-0
-      },
-    ],
-    // https://github.com/lorisleiva/vuepress-plugin-seo
-    [
-      'seo',
-      {
-        siteTitle: (_, $site) => $site.title,
-        title: ($page) => $page.title,
-        description: ($page) =>
-          $page.frontmatter.description || $page.description,
-        author: (_, $site) => $site.themeConfig.author || author,
-        tags: ($page) => $page.frontmatter.tags || tags,
-        type: ($page) => 'article',
-        url: (_, $site, path) =>
-          ($site.themeConfig.domain || domain || '') + path,
-        image: ($page, $site) =>
-          $page.frontmatter.image &&
-          (($site.themeConfig.domain &&
-            !$page.frontmatter.image.startsWith('http')) ||
-            '') + $page.frontmatter.image,
-        publishedAt: ($page) =>
-          $page.frontmatter.date && new Date($page.frontmatter.date),
-        modifiedAt: ($page) => $page.lastUpdated && new Date($page.lastUpdated),
-      },
-    ],
-    // 点击特效
-    [
-      'cursor-effects',
-      {
-        size: 2, // size of the particle, default: 2
-        shape: 'star', // ['star' | 'circle'], // shape of the particle, default: 'star'
-        zIndex: 999999999, // z-index property of the canvas, default: 999999999
-      },
-    ],
   ],
 })

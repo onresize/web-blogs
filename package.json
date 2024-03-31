@@ -26,7 +26,9 @@
     "@vuepress/theme-default": "2.0.0-rc.21",
     "vue": "^3.4.21",
     "vuepress": "2.0.0-rc.9",
+    "vuepress-plugin-cursor-effects": "^1.1.6",
     "vuepress-plugin-feed": "^0.1.9",
+    "vuepress-plugin-seo": "^0.2.0",
     "vuepress-plugin-sitemap": "^2.3.1"
   }
 }

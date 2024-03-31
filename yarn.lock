@@ -273,6 +273,27 @@
   resolved "https://registry.npmmirror.com/@mdit-vue/types/-/types-2.0.0.tgz#466e13f63af80cb90ffdfbad82854cfa1c1e33e4"
   integrity sha512-1BeEB+DbtmDMUAfvbNUj5Hso8cSl2sBVK2iTyOMAqhfDVLdh+/9+D0JmQHaCeUk/vuJoMhOwbweZvh55wHxm4w==
 
+"@moefy-canvas/core@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.npmmirror.com/@moefy-canvas/core/-/core-0.5.2.tgz#fd3994025942e911a6dc94b85e564818ef202f7b"
+  integrity sha512-XkaVE91Tiwb35zFmI1DbrJpMh0xe54QbzQrc7ATwMos4C08dxBnwExwXEVS7oEct7owVDY1UWxtRRVE7smtzHw==
+
+"@moefy-canvas/theme-popper@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.npmmirror.com/@moefy-canvas/theme-popper/-/theme-popper-0.5.2.tgz#717a29c6964362facf842affe47c0f016f0188d6"
+  integrity sha512-s6Gy27DKTLm2un5Od3fsAonnd7lN4pgyLXJ/omXisAZpVLbPg/Q5/QKpJLZvQ/08qNrn6X/GZjnWwvsHbJTBNw==
+  dependencies:
+    "@moefy-canvas/core" "^0.5.2"
+    "@moefy-canvas/utils" "^0.5.2"
+    ts-debounce "^4.0.0"
+
+"@moefy-canvas/utils@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.npmmirror.com/@moefy-canvas/utils/-/utils-0.5.2.tgz#11c9ac56e9a81456678ccd10b2234754e2a20cfe"
+  integrity sha512-DnI8I/cTBFfn3xoXwyyLEtye4pMI6zJFMxU1qps731xgYTWmzBqJPkZZd/2gfNnH5NnLUOGG7Ui3sMkmJ0vg0w==
+  dependencies:
+    "@moefy-canvas/core" "^0.5.2"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -3927,6 +3948,7 @@ stdin-discarder@^0.2.1:
   integrity sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4077,6 +4099,11 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
+ts-debounce@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmmirror.com/ts-debounce/-/ts-debounce-4.0.0.tgz#33440ef64fab53793c3d546a8ca6ae539ec15841"
+  integrity sha512-+1iDGY6NmOGidq7i7xZGA4cm8DAa6fqdYcvO5Z6yBevH++Bdo9Qt/mN0TzHUgcCcKv1gmh9+W5dHqz8pMWbCbg==
+
 tslib@^2.0.0, tslib@^2.0.3:
   version "2.6.2"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
@@ -4203,6 +4230,13 @@ vue@^3.4.21:
     "@vue/server-renderer" "3.4.21"
     "@vue/shared" "3.4.21"
 
+vuepress-plugin-cursor-effects@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-cursor-effects/-/vuepress-plugin-cursor-effects-1.1.6.tgz#b71efc76e48a7f0f7492e60fc52047c3386569e9"
+  integrity sha512-4qXL2flMQcd6ecp+LhdChspobhdb9fkAfmRjRs2K3a/DiwtQtOE24jaVFCClwhfDpYuRe48a0KVeROYkdiWuXg==
+  dependencies:
+    "@moefy-canvas/theme-popper" "^0.5.2"
+
 vuepress-plugin-feed@^0.1.9:
   version "0.1.9"
   resolved "https://registry.npmmirror.com/vuepress-plugin-feed/-/vuepress-plugin-feed-0.1.9.tgz#706fc381c1831c110d161b7e892057750c8904da"
@@ -4215,6 +4249,11 @@ vuepress-plugin-feed@^0.1.9:
     lodash.trimstart "^4.5.1"
     remove-markdown "0.3.0"
     striptags "3.1.1"
+
+vuepress-plugin-seo@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-seo/-/vuepress-plugin-seo-0.2.0.tgz#2fa4fd7ef2eb6c71f62302f264aeba47c6560ee9"
+  integrity sha512-/Rqul20UTL30mZyCbNwkfAfP50Yr7jzWlavQ92OVzZ8PcpZGXoDc+eoKQyKLQKL3G96dqvuCCbIMbW7RRs7Bhw==
 
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"

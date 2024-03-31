@@ -5,9 +5,9 @@ import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 <template>
   <ParentLayout>
     <template #page-bottom>
-      <div class="my-footer">
+      <!-- <div class="my-footer">
         <a href="https://onresize.github.io/rss.xml" title="订阅" target="_blank" class="icon-rss"></a>
-      </div>
+      </div> -->
     </template>
   </ParentLayout>
 </template>

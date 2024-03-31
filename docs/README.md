@@ -3,9 +3,9 @@ home: true
 # title: Home
 # heroText: BLOGS
 heroImage: /image.png
-tagline: 笔记-博客✨
+tagline: 💻学习📝记录🔗分享
 actions:
-  - text: 开始阅读 →
+  - text: ✨开始阅读 →
     link: /技术总结/踩坑总结/一个项目安装不同版本的依赖包
 features:
   - title: 简洁至上⭐️
