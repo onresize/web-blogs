@@ -53,7 +53,7 @@ export default defineUserConfig({
     [
       'script',
       {
-        src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
+        src: '/web-blogs/static/js/busuanzi.pure.mini.js',
       },
     ],
     // 百度统计

@@ -12,7 +12,7 @@ const loadScript = (url) => {
 
 const route = useRoute()
 watch(() => route.path, async (val) => {
-  loadScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+  loadScript('/web-blogs/static/js/busuanzi.pure.mini.js')
 },
   {
     flush: 'post',
