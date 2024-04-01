@@ -11,11 +11,11 @@ description: git篇
 > 本文作者：[onresize](https://github.com/onresize)
 
 <center>
-  <img src="/web-blogs/AA_mdPics/code001.png" />
+  <img src="/AA_mdPics/code001.png" />
 </center>
 
 <center>
-    <img src="/web-blogs/AA_mdPics/git.png" />
+    <img src="/AA_mdPics/git.png" />
 </center> 
 
 ### `1.git pull = (git fetch + git merge)`
