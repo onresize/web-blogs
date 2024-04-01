@@ -1,11 +1,12 @@
 import { defineClientConfig } from 'vuepress/client'
 import Layout from './layouts/Layout.vue'
 import Fps from './components/Fps.vue'
+import DynamicTitle from './components/DynamicTitle.vue'
 
 // @see: https://v2.vuepress.vuejs.org/zh/advanced/cookbook/usage-of-client-config.html
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
-    // app.component('Fps', Fps)
+    app.component('DynamicTitle', DynamicTitle)
   },
   setup() {},
   layouts: {

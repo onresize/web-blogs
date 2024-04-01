@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { loopFps } from './utils/fps'
+import { loopFps } from '../utils/tools'
 
 onMounted(loopFps)
 </script>

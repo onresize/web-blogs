@@ -287,6 +287,15 @@
     "@moefy-canvas/utils" "^0.5.2"
     ts-debounce "^4.0.0"
 
+"@moefy-canvas/theme-sakura@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.npmmirror.com/@moefy-canvas/theme-sakura/-/theme-sakura-0.5.2.tgz#fb669355411f05bcf72c4e83921703073c7e99cd"
+  integrity sha512-Bkqsn7Cs/j6hdMI6GO5t74lDXe6RDyKNgyRmkIFptKjl1KhLig9NMcl0KHg0+M0BXfNMiRe/FkJPeI6E8XuCgA==
+  dependencies:
+    "@moefy-canvas/core" "^0.5.2"
+    "@moefy-canvas/utils" "^0.5.2"
+    ts-debounce "^4.0.0"
+
 "@moefy-canvas/utils@^0.5.2":
   version "0.5.2"
   resolved "https://registry.npmmirror.com/@moefy-canvas/utils/-/utils-0.5.2.tgz#11c9ac56e9a81456678ccd10b2234754e2a20cfe"
