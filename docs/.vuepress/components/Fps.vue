@@ -12,7 +12,7 @@ onMounted(loopFps)
 <style scoped lang='scss'>
 #fps {
   position: fixed;
-  right: 0;
+  right: -3px;
   bottom: 5px;
   box-sizing: border-box;
   padding: 0 6px;

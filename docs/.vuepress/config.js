@@ -1,5 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
+import fs from 'fs'
+import path from 'path'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
@@ -12,7 +14,30 @@ const tags = ['程序员', '编程', '前端']
 
 export default defineUserConfig({
   // 打包工具
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        host: '0.0.0.0', // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
+        port: 9001,
+        open: false,
+        strictPort: true, // 若端口已被占用则会直接退出
+        cors: true, // 配置 CORS
+        hmr: {
+          overlay: true, // 服务器错误是否显示在页面上
+        },
+        // 开启本地https服务: https://xiaoshen.blog.csdn.net/article/details/135893188
+        https: {
+          key: fs.readFileSync(
+            path.resolve(__dirname, 'certs', 'localhost+3-key.pem')
+          ),
+          cert: fs.readFileSync(
+            path.resolve(__dirname, 'certs', 'localhost+3.pem')
+          ),
+        },
+      },
+    },
+    vuePluginOptions: {},
+  }),
   // bundler: webpackBundler({}),
   base: '/web-blogs/',
 
@@ -24,12 +49,11 @@ export default defineUserConfig({
   head: [
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
-    // SEO
+    // 添加CDN链接
     [
-      'meta',
+      'script',
       {
-        name: 'keywords',
-        content: 'onresize的笔记, 博客',
+        src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
       },
     ],
     // 百度统计
@@ -45,6 +69,18 @@ export default defineUserConfig({
       s.parentNode.insertBefore(hm, s);
     })();  
     `,
+    ],
+    // SEO
+    [
+      'meta',
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content: 'upgrade-insecure-requests',
+      },
+      {
+        name: 'keywords',
+        content: 'onresize, 笔记, 博客, 记录',
+      },
     ],
   ],
 
