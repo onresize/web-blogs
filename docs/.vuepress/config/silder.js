@@ -2,7 +2,7 @@ export default [
   {
     text: '🗃️技术总结',
     link: '/技术总结/踩坑总结/',
-    collapsible: true,
+    collapsible: false,
     children: [
       '/技术总结/踩坑总结/一个项目安装不同版本的依赖包',
       '/技术总结/踩坑总结/MIME类型',
@@ -13,6 +13,10 @@ export default [
       '/技术总结/踩坑总结/关于github_pages部署前端脚手架项目大刷404问题及解决方案',
       '/技术总结/踩坑总结/git篇',
       '/技术总结/踩坑总结/nginx篇',
+      '/技术总结/踩坑总结/referrer',
+      '/技术总结/踩坑总结/前端缓存',
+      '/技术总结/踩坑总结/worker',
+      '/技术总结/踩坑总结/跨域相关',
     ],
   },
   {

@@ -1,10 +1,12 @@
 <script setup>
-import { watch } from 'vue'
+import { watch, onMounted, onUnmounted } from 'vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { useRoute } from 'vue-router';
 import { Popper, PopperShape, MAX_Z_INDEX } from '@moefy-canvas/theme-popper'
 import { Sakura } from '@moefy-canvas/theme-sakura'
 import { devDependencies } from '../../../package.json'
+
+console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
 
 const loadScript = (url) => {
   const script = document.createElement('script')
@@ -12,8 +14,6 @@ const loadScript = (url) => {
   script.src = url
   document.head.appendChild(script)
 }
-
-console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
 
 const themeConfig = {
   shape: PopperShape.Star,
@@ -31,31 +31,45 @@ el.id = 'moefy-canvas'
 document.body.appendChild(el)
 let popper = null, sakura = null
 
-// 点击颗粒特效
-const loadPopper = () => {
-  sakura && sakura.unmount()
-  popper = new Popper(themeConfig, canvasOptions)
-  popper.mount(el)
-}
-
-// 樱花散落特效
+// 花瓣散落特效
 const loadSakura = () => {
-  popper && popper.unmount()
+  console.log('加载花瓣特效-----')
+  popper?.unmount()
   sakura = new Sakura({ numPatels: 30 }, canvasOptions)
   sakura.mount(el)
 }
 
+// 点击颗粒特效
+const loadPopper = () => {
+  if (popper) return
+  console.log('加载颗粒特效-----')
+  sakura?.unmount()
+  sakura = null
+  popper = new Popper(themeConfig, canvasOptions)
+  popper.mount(el)
+}
+
+loadPopper()
 const route = useRoute()
-console.log('route:', route)
-watch(() => route.path, async (val) => {
+// console.log('监听route:', route)
+watch(() => route.path, (val) => {
   loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
-  val === '/' ? loadSakura() : loadPopper()
+  // val === '/' ? loadSakura() : loadPopper()
 },
   {
     flush: 'post',
     deep: true,
     immediate: true
   })
+
+onMounted(() => { })
+
+onUnmounted(() => {
+  popper?.unmount()
+  sakura?.unmount()
+  popper = null
+  sakura = null
+})
 </script>
  
 <template>

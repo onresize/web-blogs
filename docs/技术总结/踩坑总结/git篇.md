@@ -10,13 +10,13 @@ description: git篇
 
 > 本文作者：[onresize](https://github.com/onresize)
 
-<center>
+<p align="center">
   <img src="/AA_mdPics/code001.png" />
-</center>
+</p>
 
-<center>
+<p align="center">
     <img src="/AA_mdPics/git.png" />
-</center> 
+</p>
 
 ### `1.git pull = (git fetch + git merge)`
 
@@ -236,12 +236,19 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-### `11.git commit常用命令`
+### `11.git add常用命令`
 ```js
-// TODO
+git add .
+git add -A
 ```
 
-### `12.本地git仓库同时关联gitee和github`
+### `12.git commit常用命令`
+```js
+git commit
+git commit -m
+```
+
+### `13.本地git仓库同时关联gitee和github`
 ```js
 // 创建了gitee仓库并关联、再创建github仓库、选择已有仓库的代码、例：
 git remote add github https://xxx.git  // 相反操作把 github 改成 gitee
@@ -269,7 +276,7 @@ git remote set-url origin <新远程仓库地址>
 git remote rm github // 命令行的 github 为要删除的地址、也可以是 origin 或 gitee
 ```
 
-### `13.git flow 工作流`
+### `14.git flow 工作流`
 ```text
 // TODO
 ```
