@@ -6,7 +6,7 @@ feed:
 description: git篇
 ---
 
-# git 篇
+# git篇
 
 > 本文作者：[onresize](https://github.com/onresize)
 

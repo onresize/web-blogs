@@ -46,7 +46,6 @@ nginx -V            显示 nginx 的版本，编译器版本和配置参数。
 ### `3.Nginx 基本配置说明`
 
 ::: details
-
 ```bash
 user nobody;
 #启动进程,通常设置成和cpu的数量相等
@@ -169,7 +168,6 @@ http {
     }
 }
 ```
-
 :::
 
 - ### `location 匹配规则`
@@ -304,7 +302,6 @@ rewrite ^/images/(.*).(png|jpg|gif)$ /images?name=$1.$4 last;
 - <b>nginx.conf 配置如下：</b>
 
 ::: details
-
 ```bash
 # 运行用户
 # user somebody;
@@ -415,7 +412,6 @@ http {
 }
 
 ```
-
 :::
 
 好了，让我们来试试吧：
@@ -437,8 +433,8 @@ http {
 - nginx 也可以实现简单的负载均衡功能。
 - 假设这样一个应用场景：将应用部署在 `192.168.1.11:80` 、 `192.168.1.12:80` 、 `192.168.1.13:80` 三台 linux 环境的服务器上。网站域名叫 www.helloworld.com，公网 IP 为 `192.168.1.11` 。- 在公网 IP 所在的服务器上部署 nginx，对所有请求做负载均衡处理。
 - <b>nginx.conf 配置如下：</b>
-  ::: details
 
+::: details
 ```bash
 http {
   #设定mime类型,类型由mime.type文件定义
@@ -501,7 +497,6 @@ http {
   }
 }
 ```
-
 :::
 
 #### `3.3、网站有多个 webapp 的配置`
@@ -740,8 +735,8 @@ HTTP2.0 标准中，虽然没有强制提出要使用加密（HTTPS）但是目�
 - #### `前提`
 - `注意根据自己实际项目信息修改`
 - 项目已经 build、并且已经启动了、https 相关证书已放在`/etc/nginx/cert`目录下
-  ::: details
 
+::: details
 ```bash
 # 开启gzip
 gzip on;
@@ -808,13 +803,27 @@ server {
   rewrite ^(.*)$ https://$host$1;
 }
 ```
-
 :::
 
-### `6.最佳实践`
+### `6.如何开启http3`
+```bash
+listen 443 ssl http2; # 代表开启HTTP/2
+listen 443 quic; # 代表开启HTTP/3
+ssl_early_data on; # 开启0-RTT
+add_header Alt-Svc 'h3=":443"; ma=86400'; # 通知浏览器可以使用HTTP/3
+ssl_protocols TLSv1.3; #HTTP/3需要TLSv1.3支持
+ 
+brotli on; #启用
+brotli_comp_level 6; #压缩等级，默认6，最高11，太高的压缩水平可能需要更多的CPU
+brotli_min_length 1k; #指定压缩数据的最小长度，只有大于或等于最小长度才会对其压缩。这里指定1k
+brotli_types text/plain application/javascript application/x-javascript text/javascript text/css application/xml application/json image/svg application/font-woff application/vnd.ms-fontobject application/vnd.apple.mpegurl image/x-icon image/jpeg image/gif image/png image/bmp; #指定允许进行压缩类型
+brotli_static always; #是否允许查找预处理好的、以.br结尾的压缩文件，可选值为on、off、always
+brotli_window 512k; #窗口值，默认值为512k
+```
+
+### `7.最佳实践`
 
 ::: details
-
 ```bash
 server {
   listen 80;
@@ -1000,5 +1009,4 @@ server {
   }
 }
 ```
-
 :::

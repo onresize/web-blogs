@@ -6,7 +6,7 @@ feed:
 description: CICD相关
 ---
 
-# TS CICD相关
+# CICD相关
 
 > 本文作者：[onresize](https://github.com/onresize)
 

@@ -33,7 +33,6 @@ let popper = null, sakura = null
 
 // 花瓣散落特效
 const loadSakura = () => {
-  console.log('加载花瓣特效-----')
   popper?.unmount()
   sakura = new Sakura({ numPatels: 30 }, canvasOptions)
   sakura.mount(el)
@@ -42,7 +41,6 @@ const loadSakura = () => {
 // 点击颗粒特效
 const loadPopper = () => {
   if (popper) return
-  console.log('加载颗粒特效-----')
   sakura?.unmount()
   sakura = null
   popper = new Popper(themeConfig, canvasOptions)

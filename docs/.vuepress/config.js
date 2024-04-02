@@ -18,7 +18,7 @@ export default defineUserConfig({
     viteOptions: {
       server: {
         host: '0.0.0.0', // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
-        port: 9001,
+        port: 9008,
         open: false,
         strictPort: true, // 若端口已被占用则会直接退出
         cors: true, // 配置 CORS
@@ -49,11 +49,19 @@ export default defineUserConfig({
   head: [
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
-    // 添加CDN链接
+    // 添加脚本
     [
       'script',
       {
         src: '/web-blogs/static/js/busuanzi.pure.mini.js',
+        defer: true,
+      },
+    ],
+    [
+      'script',
+      {
+        src: '/web-blogs/static/js/auto-upgrade.js',
+        defer: true,
       },
     ],
     // 百度统计

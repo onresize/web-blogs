@@ -1,0 +1,13 @@
+/dist/*
+/buildBundle/*
+.local
+/node_modules/**
+bundle.html
+
+**/*.svg
+**/*.sh
+
+/public/*
+
+*.cjs
+*.md
