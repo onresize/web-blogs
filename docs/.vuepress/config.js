@@ -12,6 +12,8 @@ const author = 'onresize'
 const domain = 'https://onresize.github.io/web-blogs/'
 const tags = ['程序员', '编程', '前端']
 
+const isProd = process.env.NODE_ENV === 'production'
+
 export default defineUserConfig({
   // 打包工具
   bundler: viteBundler({
@@ -54,13 +56,6 @@ export default defineUserConfig({
       'script',
       {
         src: '/web-blogs/static/js/busuanzi.pure.mini.js',
-        defer: true,
-      },
-    ],
-    [
-      'script',
-      {
-        src: '/web-blogs/static/js/auto-upgrade.js',
         defer: true,
       },
     ],
