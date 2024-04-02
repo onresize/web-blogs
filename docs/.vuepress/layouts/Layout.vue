@@ -1,12 +1,17 @@
 <script setup>
-import { watch, onMounted, onUnmounted } from 'vue'
+import { reactive, watch, onMounted, onUnmounted } from 'vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { useRoute } from 'vue-router';
 import { Popper, PopperShape, MAX_Z_INDEX } from '@moefy-canvas/theme-popper'
 import { Sakura } from '@moefy-canvas/theme-sakura'
+import Fps from '../components/Fps.vue'
 import { devDependencies } from '../../../package.json'
 
 console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
+
+const state = reactive({
+  showPageBottom: true,
+})
 
 const loadScript = (url) => {
   const script = document.createElement('script')
@@ -49,9 +54,11 @@ const loadPopper = () => {
 
 loadPopper()
 const route = useRoute()
-// console.log('监听route:', route)
+let routerPathArr = [encodeURI('/工作效率/HTML概览.html'), encodeURI('/工作效率/CSS概览.html')]
 watch(() => route.path, (val) => {
+  // console.log('监听route:', route)
   loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
+  state.showPageBottom = routerPathArr.includes(val) ? false : true
   // val === '/' ? loadSakura() : loadPopper()
 },
   {
@@ -71,12 +78,18 @@ onUnmounted(() => {
 </script>
  
 <template>
+  <!-- 动态改变title -->
   <DynamicTitle />
+
+  <!-- FPS组件 -->
+  <Fps v-show="state.showPageBottom" />
+
   <ParentLayout>
-    <template #page-bottom>
+    <template #page-bottom v-if="state.showPageBottom">
       <div class="my-footer">
-        <!-- <a href="https://onresize.github.io/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
-        <span id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv"></span> 次</span>
+        <!-- <a href="https://onresize.github.io/web-blogs/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
+        <span id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv"></span>
+          次</span>
       </div>
     </template>
   </ParentLayout>

@@ -31,7 +31,7 @@ mrm use cnpm
 
 # 添加源
 nrm add <registry> <url>   // registry 为源名、url 为源地址
-例如： nrm add cnpm https://registry.npmmirror.com
+# 例如： nrm add cnpm https://registry.npmmirror.com
 
 # 删除源
 nrm del <registry>

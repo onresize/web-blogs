@@ -37,7 +37,7 @@ console.log(document.referrer);
 <meta name="referrer" content="origin">
 ```
 
-### `3.么情况会丢失Referrer`
+### `3.什么情况下会丢失Referrer`
 - 直接流量：访客是通过直接键入地址、点击收藏夹地址、以及点击即时通讯工具地址等，进入网页的，这种情况产生的流量属于直接流量，直接流量的请求中没有Referrer信息。
 - 修改Location对象进行页面导航：Location对象是一个用于页面导航的非常实用的对象，可以通过修改其中的一部分来实现页面的跳转。然而，通过修改Location对象进行页面导航的方法，会导致在IE下丢失Referrer。
 - window.open方式打开新窗口：在IE下，通过window.open方式打开新窗口，会导致Referrer丢失。但是在Chrome3.0+，Firefox3.5，Opera9.6，Safari3.2.2等浏览器中，会正常返回来源网页。

@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>HTML5速查表</title>
+    <style type="text/css">
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background-color: #f5f5f5;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #3eaf7c;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 #ffffff;
+      }
+
+      ::selection {
+        background: rgb(255 145 0.1);
+      }
+
+      html,
+      body {
+        margin: 2px;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 12px;
+        background-color: #f5f5f5;
+      }
+      table.wikitable {
+        float: left;
+        background: none repeat scroll 0 0 #f9f9f9;
+        border: 1px solid #96b2d3;
+        border-collapse: collapse;
+        color: black;
+      }
+      .wikitable th,
+      .wikitable td {
+        border: 1px solid #96b2d3;
+      }
+      .wikitable tr:hover {
+        background: #eaf0f7;
+      }
+      .wikitable td {
+        padding: 5px 8px;
+        line-height: 18px;
+      }
+      .wikitable th {
+        color: #4070aa;
+        padding: 4px;
+        font-weight: normal;
+      }
+      p {
+        line-height: 1.5em;
+        margin: 0.4em 0 0.5em;
+      }
+      ._th th {
+        font-size: 18px;
+        color: #000;
+        background: #dbe5f1;
+        text-align: center;
+      }
+      h2 {
+        margin: 0;
+        font-weight: normal;
+        text-align: center;
+        background: #4f81bd;
+        color: #fff;
+        font-family: '黑体';
+        padding: 8px 0;
+        margin-bottom: 5px;
+        font-size: 37px;
+      }
+      .gray {
+        background: #f4f4f4;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>HTML5速查表</h2>
+    <table class="wikitable" width="33%">
+      <tbody>
+        <tr class="_th">
+          <th width="15%">标签</th>
+          <th width="30%">描述</th>
+          <th width="15%">版本</th>
+          <th width="40%">属性</th>
+        </tr>
+        <tr>
+          <th>&lt;!--...--&gt;</th>
+          <td>定义注释</td>
+          <td align="center">4 / 5</td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <th>&lt;!DOCTYPE&gt;</th>
+          <td>定义文档类型</td>
+          <td align="center">4 / 5</td>
+          <td>none</td>
+        </tr>
+        <tr>
+          <th>&lt;a&gt;</th>
+          <td>定义超链接，用于从一个页面链接到另一个页面。</td>
+          <td align="center">4 / 5</td>
+          <td>href | hreflang | media | ping | rel | target | type</td>
+        </tr>
+        <tr>
+          <th>&lt;abbr&gt;</th>
+          <td>定义缩写</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;acronym&gt;</th>
+          <td>定义首字母缩写</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;address&gt;</th>
+          <td>定义文档作者或拥有者的联系信息 .</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;applet&gt;</th>
+          <td>&nbsp;定义嵌入的 applet</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;area&gt;</th>
+          <td>
+            定义图像映射内部的区域（图像映射指的是带有可点击区域的图像）。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>
+            alt | coords | href | hreflang | media | ping | rel | shape | target
+            | type
+          </td>
+        </tr>
+        <tr>
+          <th>&lt;article&gt;</th>
+          <td>定义独立的内容</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;aside&gt;</th>
+          <td>定义页面内容之外的内容</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;audio&gt;</th>
+          <td>定义声音，比如音乐或其他音频流。</td>
+          <td align="center">5</td>
+          <td>autobuffer | autoplay | controls | loop | src</td>
+        </tr>
+        <tr>
+          <th>&lt;b&gt;</th>
+          <td>定义粗体文本 , 用于强调某些文本</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;base&gt;</th>
+          <td>定义页面上的所有链接规定默认地址或默认目标</td>
+          <td align="center">4 / 5</td>
+          <td>href | target</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;basefont&gt;</th>
+          <td>定义文档中所有文本的默认颜色、大小和字体</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;bb&gt;</th>
+          <td>定义文本的文本方向，使其脱离其周围文本的方向设置。</td>
+          <td align="center">5</td>
+          <td>type</td>
+        </tr>
+        <tr>
+          <th>&lt;bdi&gt;</th>
+          <td>
+            指的是 bidi 隔离, 允许您设置一段文本，使其脱离其父元素的文本方向设置
+            .
+          </td>
+          <td align="center">5</td>
+          <td>dir</td>
+        </tr>
+        <tr>
+          <th>&lt;bdo&gt;</th>
+          <td>定义文本显示的方向。</td>
+          <td align="center">4 / 5</td>
+          <td>dir</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;big&gt;</th>
+          <td>定义大号文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;blockquote&gt;</th>
+          <td>定义摘自另一个源的块引用 。</td>
+          <td align="center">4 / 5</td>
+          <td>cite</td>
+        </tr>
+        <tr>
+          <th>&lt;body&gt;</th>
+          <td>定义文档的主体 。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;br&gt;</th>
+          <td>插入换行符。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;button&gt;</th>
+          <td>定义按钮。</td>
+          <td align="center">4 / 5</td>
+          <td>
+            autofocus | disabled | form | formaction | formenctype | formme-thod
+            | formnovalidate | formtarget | name | type | value
+          </td>
+        </tr>
+        <tr>
+          <th>&lt;canvas&gt;</th>
+          <td>定义图形，比如图表和其他图像</td>
+          <td align="center">5</td>
+          <td>height | width<br /></td>
+        </tr>
+        <tr>
+          <th>&lt;caption&gt;</th>
+          <td>定义表格标题。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;center&gt;</th>
+          <td>定义居中的文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;cite&gt;</th>
+          <td>
+            定义作品（比如书籍、歌曲、电影、电视节目、绘画、雕塑等等）的标题。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;code&gt;</th>
+          <td>定义计算机代码文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;col&gt;</th>
+          <td>定义为表格中的一个或多个列定义属性值。 。</td>
+          <td align="center">4 / 5</td>
+          <td>span</td>
+        </tr>
+        <tr>
+          <th>&lt;colgroup&gt;</th>
+          <td>定义对表格中的列进行组合，以便对其进行格式化。</td>
+          <td align="center">4 / 5</td>
+          <td>span<br /></td>
+        </tr>
+        <tr>
+          <th>&lt;command&gt;</th>
+          <td>定义命令按钮。</td>
+          <td align="center">5</td>
+          <td>
+            checked | default | disabled | hidden | icon | label | radiogroup |
+            type
+          </td>
+        </tr>
+        <tr>
+          <th>&lt;datagrid&gt;</th>
+          <td>定义可选数据的列表。 datagrid 作为树列表来显示。</td>
+          <td align="center">5</td>
+          <td>disabled | multipe</td>
+        </tr>
+        <tr>
+          <th>&lt;datalist&gt;</th>
+          <td>
+            定义下拉列表。 请与 input 元素配合使用该元素，来定义 input
+            可能的值。
+          </td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;dd&gt;</th>
+          <td>定义一个定义列表中对项目的描述 。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;del&gt;</th>
+          <td>定义删除文本。</td>
+          <td align="center">4 / 5</td>
+          <td>cite | datetime</td>
+        </tr>
+        <tr>
+          <th>&lt;details&gt;</th>
+          <td>定义描述文档或文档某个部分的细节。</td>
+          <td align="center">5</td>
+          <td>open</td>
+        </tr>
+        <tr>
+          <th>&lt;dialog&gt;</th>
+          <td>定义对话，比如交谈</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;dir&gt;</th>
+          <td>定义目录列表。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;div&gt;</th>
+          <td>定义文档中的一个部分。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;dfn&gt;</th>
+          <td>定义一个定义项目。</td>
+          <td align="center">4 / 5</td>
+          <td>title</td>
+        </tr>
+        <tr>
+          <th>&lt;dl&gt;</th>
+          <td>定义一个定义列表 .</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;dt&gt;</th>
+          <td>定义一个定义列表中的一个项目。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;em&gt;</th>
+          <td>呈现为被强调的文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;embed&gt;</th>
+          <td>定义嵌入的内容，比如插件</td>
+          <td align="center">5</td>
+          <td>height | src | type | width</td>
+        </tr>
+        <tr>
+          <th>&lt;fieldset&gt;</th>
+          <td>定义用于从逻辑上将表单中的元素组合起来。</td>
+          <td align="center">4 / 5</td>
+          <td>disabled | form | name</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="wikitable" width="33%" style="margin: 0 6px">
+      <tbody>
+        <tr class="_th">
+          <th width="15%">标签</th>
+          <th width="30%">描述</th>
+          <th width="15%">版本</th>
+          <th width="40%">属性</th>
+        </tr>
+        <tr>
+          <th>&lt;figcaption&gt;</th>
+          <td>定义 fiqure 元素的标题（caption）。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;figure&gt;</th>
+          <td>规定独立的流内容（图像、图表、照片、代码等等）。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;font&gt;</th>
+          <td>规定文本的字体、大小和颜色。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;footer&gt;</th>
+          <td>定义 section 或 document 的页脚。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;form&gt;</th>
+          <td>用于创建供用户输入的 HTML 表单</td>
+          <td align="center">4 / 5</td>
+          <td>
+            action | date | replace | accept | accept-charset | enctype | method
+            | target
+          </td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;frame&gt;</th>
+          <td>定义子窗口（框架）</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;frameset&gt;</th>
+          <td>定义框架集。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;h1&gt; to &lt;h6&gt;</th>
+          <td>
+            定义标题。&lt;h1&gt; 定义最大的标题。&lt;h6&gt; 定义最小的标题
+          </td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;heda&gt;</th>
+          <td>
+            所有头部元素的容器。位于 &lt;head&gt;
+            内部的元素可以包含脚本、指引浏览器找到样式表、提供元信息，等等。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>无</td>
+        </tr>
+        <tr>
+          <th>&lt;header&gt;</th>
+          <td>定义文档的页眉（介绍信息）。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;hgroup&gt;</th>
+          <td>用于对网页或区段（section）的标题进行组合。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;hr&gt;</th>
+          <td>水平线，它应该定义内容中的主题变化</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;html&gt;</th>
+          <td>告知浏览器这是一个 HTML 文档。</td>
+          <td align="center">4 / 5</td>
+          <td>manifest</td>
+        </tr>
+        <tr>
+          <th>&lt;i&gt;</th>
+          <td>呈现斜体的文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;iframe&gt;</th>
+          <td>创建包含另一个文档的行内框架。</td>
+          <td align="center">4 / 5</td>
+          <td>src | name | sandbox | seamless | width | height</td>
+        </tr>
+        <tr>
+          <th>&lt;img&gt;</th>
+          <td>定义 HTML 页面中的图像。</td>
+          <td align="center">4 / 5</td>
+          <td>alt | src | height | ismap | usemap | width</td>
+        </tr>
+        <tr>
+          <th>&lt;input&gt;</th>
+          <td>规定用户可输入数据的输入字段。</td>
+          <td align="center">4 / 5</td>
+          <td>
+            accept | alt | auto-complete | autofocus | checked | disabled | from
+            | formaction | formenctype | formme-thod | formnovalidate |
+            formtarget | height | list | max | maxiength | min | multipe | name
+            | pattern | placeholder | readonly | required | size | src | step |
+            type | value | width
+          </td>
+        </tr>
+        <tr>
+          <th>&lt;ins&gt;</th>
+          <td>定义文档的其余部分之外的插入文本。</td>
+          <td align="center">4 / 5</td>
+          <td>cite | datetime</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;isindex&gt;</th>
+          <td>定义单行的输入域。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;keygen&gt;</th>
+          <td>规定用于表单的密钥对生成器字段。</td>
+          <td align="center">5</td>
+          <td>autofocus | challenge | disabled | form | keytype | name</td>
+        </tr>
+        <tr>
+          <th>&lt;kbd&gt;</th>
+          <td>
+            定义键盘文本。它表示文本是从键盘上键入的。它经常用在与计算机相关的文档或手册中。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;label&gt;</th>
+          <td>为 input 元素定义标签（label）</td>
+          <td align="center">4 / 5</td>
+          <td>for | form</td>
+        </tr>
+        <tr>
+          <th>&lt;legend&gt;</th>
+          <td>
+            为以下元素定义标题（caption）：&lt;fieldset&gt;、&lt;figure&gt;、&lt;details&gt;。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;li&gt;</th>
+          <td>定义列表项，有序列表和无序列表中都使用 &lt;li&gt; 标签。</td>
+          <td align="center">4 / 5</td>
+          <td>value</td>
+        </tr>
+        <tr>
+          <th>&lt;link&gt;</th>
+          <td>定义文档与外部资源之间的关系。 大多数时候都用来连接样式表。</td>
+          <td align="center">4 / 6</td>
+          <td>href | rel | media | hreflang | type | sizes</td>
+        </tr>
+        <tr>
+          <th>&lt;mark&gt;</th>
+          <td>定义带有记号的文本。请在需要突出显示文本时使用 &lt;m&gt; 标签</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;map&gt;</th>
+          <td>定义客户端图像映射。图像映射指的是带有可点击区域的图像。</td>
+          <td align="center">4 / 5</td>
+          <td>label | type</td>
+        </tr>
+        <tr>
+          <th>&lt;menu&gt;</th>
+          <td>定义菜单列表。当希望列出表单控件时使用该标签。</td>
+          <td align="center">5</td>
+          <td>autosubmit | compact | label | type</td>
+        </tr>
+        <tr>
+          <th>&lt;meta&gt;</th>
+          <td>
+            可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词。
+          </td>
+          <td align="center">5</td>
+          <td>charset | content | http-equiv | name | scheme</td>
+        </tr>
+        <tr>
+          <th>&lt;meter&gt;</th>
+          <td>定义度量衡。仅用于已知最大和最小值的度量。</td>
+          <td align="center">5</td>
+          <td>high | low | max | min | optimum | value</td>
+        </tr>
+        <tr>
+          <th>&lt;nav&gt;</th>
+          <td>定义导航链接的部分。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;noframes&gt;</th>
+          <td>向浏览器显示无法处理框架的提示文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;noscript&gt;</th>
+          <td>定义在脚本未被执行时的替代内容（文本）。</td>
+          <td align="center">4 / 5</td>
+          <td>无</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="wikitable" width="33%">
+      <tbody>
+        <tr class="_th">
+          <th width="15%">标签</th>
+          <th width="30%">描述</th>
+          <th width="15%">版本</th>
+          <th width="40%">属性</th>
+        </tr>
+        <tr>
+          <th>&lt;object&gt;</th>
+          <td>定义一个嵌入的对象。</td>
+          <td align="center">4 / 5</td>
+          <td>data | height | type | usemap | width | object</td>
+        </tr>
+        <tr>
+          <th>&lt;ol&gt;</th>
+          <td>定义有序列表。</td>
+          <td align="center">4 / 5</td>
+          <td>compact | start | reversed</td>
+        </tr>
+        <tr>
+          <th>&lt;optgroup&gt;</th>
+          <td>
+            定义选项组。此元素允许您组合选项。当您使用一个长的选项列表时，对相关的选项进行组合会使处理更加容易。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>disabled | label</td>
+        </tr>
+        <tr>
+          <th>&lt;option&gt;</th>
+          <td>定义下拉列表中的一个选项。</td>
+          <td align="center">4 / 5</td>
+          <td>disabled | label | selected | value</td>
+        </tr>
+        <tr>
+          <th>&lt;output&gt;</th>
+          <td>定义不同类型的输出，比如脚本的输出。</td>
+          <td align="center">5</td>
+          <td>form | for | name</td>
+        </tr>
+        <tr>
+          <th>&lt;p&gt;</th>
+          <td>定义段落</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;param&gt;</th>
+          <td>
+            允许您为插入 XHTML 文档的对象规定 run-time
+            设置，也就是说，此标签可为包含它的 &lt;object&gt; 标签提供参数。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>name | value | type | valuetype</td>
+        </tr>
+        <tr>
+          <th>&lt;pre&gt;</th>
+          <td>定义预格式化文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;progress&gt;</th>
+          <td>定义运行中的进度（进程）。</td>
+          <td align="center">5</td>
+          <td>max | value</td>
+        </tr>
+        <tr>
+          <th>&lt;q&gt;</th>
+          <td>定义一个短的引用。</td>
+          <td align="center">4 / 5</td>
+          <td>cite</td>
+        </tr>
+        <tr>
+          <th>&lt;ruby&gt;</th>
+          <td>定义 ruby 注释。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;rp&gt;</th>
+          <td>定义若浏览器不支持 ruby 元素显示的内容。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;rt&gt;</th>
+          <td>义 ruby 注释的解释。</td>
+          <td align="center">5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;s&gt;</th>
+          <td>定义加删除线的文本</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;samp&gt;</th>
+          <td>定义样本计算机代码。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;script&gt;</th>
+          <td>定义脚本。</td>
+          <td align="center">4 / 5</td>
+          <td>async | type | defer | src | charset</td>
+        </tr>
+        <tr>
+          <th>&lt;section&gt;</th>
+          <td>
+            定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分
+          </td>
+          <td align="center">5</td>
+          <td>cite</td>
+        </tr>
+        <tr>
+          <th>&lt;select&gt;</th>
+          <td>创建下拉列表</td>
+          <td align="center">4 / 5</td>
+          <td>autofocus | data | disabled | form | multiple | name</td>
+        </tr>
+        <tr>
+          <th>&lt;small&gt;</th>
+          <td>将旁注 (side comments) 呈现为小型文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;source&gt;</th>
+          <td>
+            为媒介元素（比如 &lt;video&gt; 和 &lt;audio&gt;）定义媒介资源。
+          </td>
+          <td align="center">5</td>
+          <td>media | src | type</td>
+        </tr>
+        <tr>
+          <th>&lt;span&gt;</th>
+          <td>用于对文档中的行内元素进行组合</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;strike&gt;</th>
+          <td>定义加删除线的文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;strong&gt;</th>
+          <td>定义重要的文本 .</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;style&gt;</th>
+          <td>定义 HTML 文档的样式信息。</td>
+          <td align="center">4 / 5</td>
+          <td>media | type | scoped</td>
+        </tr>
+        <tr>
+          <th>&lt;sub&gt;</th>
+          <td>定义下标文本</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;sup&gt;</th>
+          <td>定义上标文本。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;summary&gt;</th>
+          <td>
+            包含 details 元素的标题，&quot;details&quot;
+            元素用于描述有关文档或文档片段的详细信息。
+          </td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;table&gt;</th>
+          <td>定义 HTML 表格</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;tbody&gt;</th>
+          <td>定义表格的主体。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;td&gt;</th>
+          <td>定义表格单元</td>
+          <td align="center">4 / 5</td>
+          <td>colspan | rowspan | headers</td>
+        </tr>
+        <tr>
+          <th>&lt;textarea&gt;</th>
+          <td>定义一个文本区域 (text-area) （一个多行的文本输入区域）。</td>
+          <td align="center">4 / 5</td>
+          <td>
+            autofocus | cols | disabled | form | name | feadonly | required |
+            required | rows | maxlength | placeholder | wrap
+          </td>
+        </tr>
+        <tr>
+          <th>&lt;tfoot&gt;</th>
+          <td>定义表格的页脚（脚注）</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;th&gt;</th>
+          <td>定义 HTML 表格中的表头单元格。</td>
+          <td align="center">4 / 5</td>
+          <td>colspan | rowspan | scope</td>
+        </tr>
+        <tr>
+          <th>&lt;thead&gt;</th>
+          <td>定义表格的表头。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;time&gt;</th>
+          <td>定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。</td>
+          <td align="center">5</td>
+          <td>datetime</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;title&gt;</th>
+          <td>定义文档的标题</td>
+          <td align="center">4</td>
+          <td>无</td>
+        </tr>
+        <tr>
+          <th>&lt;tr&gt;</th>
+          <td>定义表格中的行。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;track&gt;</th>
+          <td>为诸如 video 元素之类的媒介规定外部文本轨道。</td>
+          <td align="center">5</td>
+          <td>default | kind | label | src | srclang</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;tt&gt;</th>
+          <td>定义打字机文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;u&gt;</th>
+          <td>定义下划线文本 。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th>&lt;ul&gt;</th>
+          <td>定义无序列表。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;var&gt;</th>
+          <td>定义变量。</td>
+          <td align="center">4 / 5</td>
+          <td>全局属性</td>
+        </tr>
+        <tr>
+          <th>&lt;video&gt;</th>
+          <td>定义视频，比如电影片段或其他视频流。</td>
+          <td align="center">5</td>
+          <td>
+            src | poster | autobuffer | autoplay | loop | controls | width |
+            height
+          </td>
+        </tr>
+        <tr class="gray">
+          <th>&lt;xmp&gt;</th>
+          <td>定义预格式文本。</td>
+          <td align="center">4</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

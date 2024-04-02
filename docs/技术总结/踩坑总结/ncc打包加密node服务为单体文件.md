@@ -13,10 +13,8 @@ description: ncc打包加密node服务为单体文件
 
 #### 用途
 
-```js
-// 加密打包、避免源码暴露
-优点：单体文件、有node环境就能直接运行、不需要安装依赖
-```
+- 加密打包、避免源码暴露
+- 优点：单体文件、有node环境就能直接运行、不需要安装依赖
 
 #### 安装
 
@@ -33,7 +31,7 @@ npm list -g
 #### 打包命令
 
 ```js
-# 指定打包根目录下的mp4ToFlv.js文件及依赖到outMp4ToFlv文件夹
+// 指定打包根目录下的mp4ToFlv.js文件及依赖到outMp4ToFlv文件夹
 "scripts": {
 	"build": "ncc build mp4ToFlv.js -m -o outMp4ToFlv"
 }

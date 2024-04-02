@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS 速查表</title>
+<meta name="keywords" content="前端开发,Web标准,css选择器,css选择符,css selectors,css属性,css兼容表">
+<meta name="description" content="通过本页面快速筛选各浏览器支持的 CSS 选择器及属性。">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="./css/layout.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+  <div id="header" class="header">
+    <h1>CSS 速查表 <a target="_blank" class="site" href="/"></a></h1>
+    <dl class="options">
+      <dt>浏览器版本</dt>
+      <dd>
+        <a class="n" href="javascript://" rel="browserVer">不限</a>
+        <a href="javascript://" rel="browserVer" rev="ie11">IE11</a>
+        <a href="javascript://" rel="browserVer" rev="ie10">IE10</a>
+        <a href="javascript://" rel="browserVer" rev="ie9">IE9</a>
+        <a href="javascript://" rel="browserVer" rev="ie8">IE8</a>
+        <a href="javascript://" rel="browserVer" rev="ie7">IE7</a>
+        <a href="javascript://" rel="browserVer" rev="ie6">IE6</a>
+      </dd>
+    </dl>
+    <dl class="options">
+      <dt>无效样式</dt>
+      <dd>
+        <a class="n" href="javascript://" rel="delStyle" rev="line">删除线</a>
+        <a href="javascript://" rel="delStyle" rev="hide">隐藏</a>
+        <a href="javascript://" rel="delStyle" rev="node">移除</a>
+      </dd>
+    </dl>
+  </div>
+  
+  
+  <div id="example">
+    <div class="col selectors">
+      <dl>
+        <dt>元素选择符<em>Element Selectors</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Universal_selectors">*</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Type_selectors">E</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/ID_selectors">#id</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Class_selectors">.class</a></dd>
+        <dd data-ie6="0">.class.class</dd>
+      </dl>
+      <dl>
+        <dt>关系选择符<em>Relationship Selectors</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Descendant_selectors">E F</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Child_selectors">E > F</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Adjacent_sibling_selectors">E + F</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/General_sibling_selectors">E ~ F</a></dd>
+      </dl>
+      <dl>
+        <dt>属性选择符<em>Attribute Selectors</em></dt>
+        <dd data-ie6="0"><a target="_blank" href="">[att]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att="val"]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att^="val"]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att$="val"]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att*="val"]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att~="val"]</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="">[att|="val"]</a></dd>
+      </dl>
+      <dl>
+        <dt>伪对象选择符<em>Pseudo-Element Selectors</em></dt>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/::first-letter">:first-letter</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/::first-letter">::first-letter</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/::first-line">:first-line</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/::first-line">::first-line</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:before">:before</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:before">::before</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:after">:after</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:after">::after</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/::selection">::selection</a></dd>
+      </dl>
+    </div>
+    <div class="col selectors">
+      <dl>
+        <dt>伪类选择符<em>Pseudo-Classes Selectors</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:link">:link</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:visited">:visited</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:hover">:hover</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:active">:active</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:focus">:focus</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:lang">:lang()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:not">:not()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:root">:root</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:first-child">:first-child</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:last-child">:last-child</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-child">:only-child</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:nth-child">:nth-child(n)</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:nth-last-child">:nth-last-child(n)</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:first-of-type">:first-of-type</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:last-of-type">:last-of-type</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:only-of-type">:only-of-type</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:nth-of-type">:nth-of-type(n)</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-last-of-type">:nth-last-of-type(n)</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:empty">:empty</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:checked">:checked</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:enabled">:enabled</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:disabled">:disabled</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/:target">:target</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:first">@page:first</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:left">@page:left</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:right">@page:right</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>布局<em>Layout</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/clear">clear</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/display">display</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/float">float</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/overflow">overflow</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/overflow-x">overflow-x</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/overflow-y">overflow-y</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/visibility">visibility</a></dd>
+      </dl>
+      <dl>
+        <dt>定位<em>Positioning</em></dt>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/position">position</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/top">top</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/right">right</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/bottom">bottom</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/left">left</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/z-index">z-index</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/clip">clip</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl class="css3">
+        <dt>伸缩盒（新）<em>Flexible Box</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex">flex</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-grow">flex-grow</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-shrink">flex-shrink</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-basis">flex-basis</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-flow">flex-flow</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-direction">flex-direction</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/flex-wrap">flex-wrap</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/align-content">align-content</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/align-items">align-items</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/align-self">align-self</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/justify-content">justify-content</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/order">order</a></dd>
+      </dl>
+      <dl class="css3">
+        <dt>伸缩盒（旧）<em>Flexible Box</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-orient</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-pack</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-align</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-flex</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-flex-group</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-ordinal-group</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-direction</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0">box-lines</dd>
+      </dl>
+      <dl class="css3">
+        <dt>多列<em>Multi-column</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/columns">columns</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-width">column-width</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-count">column-count</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-gap">column-gap</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-rule">column-rule</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-rule-width">column-rule-width</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-rule-style">column-rule-style</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-rule-color">column-rule-color</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-span">column-span</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/column-fill">column-fill</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/break-before">column-break-before</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/break-after">column-break-after</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/break-inside">column-break-inside</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>尺寸<em>Dimension</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/width">width</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/min-width">min-width</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/max-width">max-width</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/height">height</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/min-height">min-height</a></dd>
+        <dd data-ie6="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/max-height">max-height</a></dd>
+      </dl>
+      <dl>
+        <dt>外边距<em>Margin</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/margin">margin</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/margin-top">margin-top</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/margin-right">margin-right</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/margin-bottom">margin-bottom</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/margin-left">margin-left</a></dd>
+      </dl>
+      <dl>
+        <dt>内边距<em>Padding</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/padding">padding</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/padding-top">padding-top</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/padding-right">padding-right</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/padding-bottom">padding-bottom</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/padding-left">padding-left</a></dd>
+      </dl>
+      <dl>
+        <dt>边框<em>Border</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border">border</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-width">border-width</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-style">border-style</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-color">border-color</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top">border-top</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top-width">border-top-width</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top-style">border-top-style</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top-color">border-top-color</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-right">border-right</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-right-width">border-right-width</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-right-style">border-right-style</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-right-color">border-right-color</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom">border-bottom</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom-width">border-bottom-width</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom-style">border-bottom-style</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom-color">border-bottom-color</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-left">border-left</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-left-width">border-left-width</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-left-style">border-left-style</a></dd>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-left-color">border-left-color</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-radius">border-radius</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top-left-radius">border-top-left-radius</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-top-right-radius">border-top-right-radius</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom-left-radius">border-bottom-right-radius</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-bottom-right-radius">border-bottom-left-radius</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/box-shadow">border-shadow</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image">border-image</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image-source">border-image-source</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image-slice">border-image-slice</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image-width">border-image-width</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image-outset">border-image-outset</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-image-repeat">border-image-repeat</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>背景<em>Background</em></dt>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background">background</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-color">background-color</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-image">background-image</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-repeat">background-repeat</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-attachment">background-attachment</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-position">background-position</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-origin">background-origin</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-clip">background-clip</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/background-size">background-size</a></dd>
+      </dl>
+      <dl>
+        <dt>颜色<em>Color</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/color">color</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/opacity">opacity</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>字体<em>Font</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font">font</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-style">font-style</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-variant">font-variant</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-weight">font-weight</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-size">font-size</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-family">font-family</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/font-stretch">font-stretch</a></dd>
+      </dl>
+      <dl>
+        <dt>文本<em>Text</em></dt>
+        <dd><a target="_blank" href="">line-height</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/letter-spacing">letter-spacing</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-align">text-align</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-align-last">text-align-last</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-indent">text-indent</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="http://msdn.microsoft.com/zh-cn/library/gg721783(v=Expression.40).aspx">text-justify</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-transform">text-transform</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/tab-size">tab-size</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/vertical-align">vertical-align</a></dd>
+        <dd data-ie6="2" data-ie7="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/white-space">white-space</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/word-break">word-break</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2" data-ie11="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/word-spacing">word-spacing</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/word-wrap">word-wrap</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0" data-ie11="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/overflow-wrap">overflow-wrap</a></dd>
+      </dl>
+      <dl>
+        <dt>文本装饰<em>Text Decoration</em></dt>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-decoration">text-decoration</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-decoration-line">text-decoration-line</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-decoration-style">text-decoration-style</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-decoration-color">text-decoration-color</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-shadow">text-shadow</a></dd>
+      </dl>
+      <dl>
+        <dt>书写模式<em>Writing Modes</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/direction">direction</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/unicode-bidi">unicode-bidi</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/writing-mode">writing-mode</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>列表<em>List</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/list-style">list-style</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/list-style-image">list-style-image</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/list-style-position">list-style-position</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/list-style-type">list-style-type</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>表格<em>Table</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/table-layout">table-layout</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-collapse">border-collapse</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/border-spacing">border-spacing</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/caption-side">caption-side</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/empty-cells">empty-cells</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>内容<em>Content</em></dt>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/content">content</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/counter-increment">counter-increment</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/counter-reset">counter-reset</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/quotes">quotes</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>用户界面<em>User Interface</em></dt>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/box-sizing">box-sizing</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/nav-index">nav-index</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/nav-up">nav-up</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/nav-right">nav-right</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/nav-down">nav-down</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/nav-left">nav-left</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/outline">outline</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/outline-width">outline-width</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/outline-style">outline-style</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/outline-color">outline-color</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/outline-offset">outline-offset</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/text-overflow">text-overflow</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/ime-mode">ime-mode</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/cursor">cursor</a></dd>
+        <dd>zoom</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0" data-ie10="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/resize">resize</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/user-select">user-select</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl class="css3">
+        <dt>变换<em>Transform</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transform">transform</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transform-origin">transform-origin</a></dd>
+      </dl>
+      <dl class="css3">
+        <dt>过渡<em>Transition</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transition">transition</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transition-property">transition-property</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transition-duration">transition-duration</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transition-timing-function">transition-timing-function</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/transition-delay">transition-delay</a></dd>
+      </dl>
+      <dl class="css3">
+        <dt>动画<em>Animation</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation">animation</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-name">animation-name</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-duration">animation-duration</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-timing-function">animation-timing-function</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-delay">animation-delay</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-iteration-count">animation-iteration-count</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-direction">animation-direction</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-play-state">animation-play-state</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/animation-fill-mode">animation-fill-mode</a></dd>
+      </dl>
+    </div>
+    <div class="col properties">
+      <dl>
+        <dt>打印<em>Printing</em></dt>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@page">page</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/page-break-before">page-break-before</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/page-break-after">page-break-after</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/page-break-inside">page-break-inside</a></dd>
+      </dl>
+    </div>
+    <div class="col rules">
+      <dl>
+        <dt>语法与规则<em>Rules</em></dt>
+        <dd data-ie6="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Specificity">!important</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/Comments">/*comments*/</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@charset">@charset</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@import">@import</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@media">@media</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2" data-ie9="2" data-ie10="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@font-face">@font-face</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@page">@page</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@keyframes">@keyframes</a></dd>
+      </dl>
+    </div>
+    <div class="col values">
+      <dl>
+        <dt>颜色值<em>Values</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/color_value#Color_keywords">Color Name</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/color_value#rgb()">HEX</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/color_value#rgb()">RGB</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value#rgba()">RGBA</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value#hsl()">HSL</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value#hsla()">HSLA</a></dd>
+        <dd data-ie6="2" data-ie7="2" data-ie8="2"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value#transparent_keyword">transparent</a></dd>
+      </dl>
+      <dl>
+        <dt>文本值<em>Textual</em></dt>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/string">&lt;string&gt;</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/uri">&lt;url&gt;</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/@keyframes">&lt;identifier&gt;</a></dd>
+      </dl>
+      <dl>
+        <dt>函数值<em>Functional</em></dt>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/counter">counter()</a></dd>
+        <dd data-ie6="0" data-ie7="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/attr">attr()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/calc">calc()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/cycle">cycle()</a></dd>
+        <!--
+        <dd>min()</dd>
+        <dd>max()</dd>
+        -->
+      </dl>
+      <dl>
+        <dt>图像值<em>Image</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/linear-gradient">linear-gradient()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/radial-gradient">radial-gradient()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/repeating-linear-gradient">repeating-linear-gradient()</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/repeating-radial-gradient">repeating-radial-gradient()</a></dd>
+      </dl>
+      <dl>
+        <dt>数字值<em>Numeric</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/integer">&lt;integer&gt;</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/number">&lt;number&gt;</a></dd>
+      </dl>
+      <dl>
+        <dt>其它类型值<em>Other</em></dt>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/length">&lt;length&gt;</a></dd>
+        <dd><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/percentage">&lt;percentage&gt;</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/angle">&lt;angle&gt;</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/time">&lt;time&gt;</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/CSS/frequency">&lt;frequency&gt;</a></dd>
+        <!--
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="">&lt;fraction&gt;</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="">&lt;grid&gt;</a></dd>
+        -->
+      </dl>
+    </div>
+    <div class="col units">
+      <dl>
+        <dt>长度单位<em>Length</em></dt>
+        <dd>em</dd>
+        <dd>ex</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">ch</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">rem</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">vw</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">vh</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">vm</dd>
+        <dd>cm</dd>
+        <dd>mm</dd>
+        <dd>in</dd>
+        <dd>pt</dd>
+        <dd>pc</dd>
+        <dd>px</dd>
+      </dl>
+      <dl>
+        <dt>角度单位<em>Angle</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">deg</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">grad</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">rad</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">turn</dd>
+      </dl>
+      <dl>
+        <dt>时间单位<em>Time</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">s</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0">ms</dd>
+      </dl>
+      <dl>
+        <dt>频率单位<em>Frequency</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0">Hz</dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0">kHz</dd>
+      </dl>
+      <!--
+      <dl>
+        <dt>特殊布局单位<em>Layout-specific</em></dt>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="">fr</a></dd>
+        <dd data-ie6="0" data-ie7="0" data-ie8="0" data-ie9="0"><a target="_blank" href="">gr</a></dd>
+      </dl>
+      -->
+    </div>
+  </div>
+</div>
+
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/jquery.wookmark.min.js"></script>
+<script src="./js/init.js"></script>
+
+<!-- <script src="http://code.ciaoca.com/static/js/donate.js"></script> -->
+<div style="display:none;">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cdiv id='cnzz_stat_icon_5076009' style='display:none;'%3E%3C/div%3E%3Cscript src='" + cnzz_protocol + "s25.cnzz.com/stat.php%3Fid%3D5076009' type='text/javascript'%3E%3C/script%3E"));</script>
+</div></body>
+</html>

@@ -10,12 +10,20 @@
   width: 6px;
   height: 6px;
   background-color: #282c34;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #3eaf7c;
   border-radius: 20px;
   box-shadow: inset 0 0 0 #ffffff;
+}
+
+pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #282c34;
+  display: block !important;
 }
 
 ::selection {

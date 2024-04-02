@@ -1,5 +1,18 @@
 export default [
   {
+    text: '🧑‍💻工作效率',
+    children: [
+      {
+        text: 'HTML概览',
+        link: '/工作效率/HTML概览',
+      },
+      {
+        text: 'CSS概览',
+        link: '/工作效率/CSS概览',
+      },
+    ],
+  },
+  {
     text: '🏷️算法学习',
     children: [
       {

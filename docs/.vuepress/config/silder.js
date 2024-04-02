@@ -2,7 +2,7 @@ export default [
   {
     text: '🗃️技术总结',
     link: '/技术总结/踩坑总结/',
-    collapsible: false,
+    collapsible: true,
     children: [
       '/技术总结/踩坑总结/一个项目安装不同版本的依赖包',
       '/技术总结/踩坑总结/MIME类型',
@@ -30,6 +30,7 @@ export default [
       '/技术总结/踩坑总结/nvm控制node版本基本使用',
       '/技术总结/踩坑总结/mac上使用nvs切换node',
       '/技术总结/踩坑总结/常用的正则表达式',
+      '/技术总结/踩坑总结/css常用单位',
       '/技术总结/踩坑总结/uniapp写APP整包升级更新',
       '/技术总结/踩坑总结/uniapp写APP消息推送方案',
     ],
@@ -37,10 +38,19 @@ export default [
   {
     text: '🏷️算法学习',
     link: '/算法学习/',
-    collapsible: false,
+    collapsible: true,
     children: [
       '/算法学习/程序员面试金典-第六版',
       '/算法学习/javascript专项练习',
+    ],
+  },
+  {
+    text: '🧑‍💻工作效率',
+    link: '/工作效率/',
+    collapsible: true,
+    children: [
+      '/工作效率/HTML概览',
+      '/工作效率/CSS概览',
     ],
   },
 ]
