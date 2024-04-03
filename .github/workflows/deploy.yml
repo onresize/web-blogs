@@ -41,8 +41,6 @@ jobs:
         uses: actions/configure-pages@v4
       - name: 执行安装依赖
         run: yarn # or pnpm install / yarn install / bun install
-      - name: 启动node服务
-        run: node /web-blogs/server/app.js
       - name: 执行打包
         run: yarn build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
