@@ -6,6 +6,7 @@ import { Popper, PopperShape, MAX_Z_INDEX } from '@moefy-canvas/theme-popper'
 import { Sakura } from '@moefy-canvas/theme-sakura'
 import Fps from '../components/Fps.vue'
 import { devDependencies } from '../../../package.json'
+import destNetWork from '../utils/socket'
 
 console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
 
@@ -61,13 +62,18 @@ watch(() => route.path, async (val) => {
   await nextTick()
   // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
   state.showPageBottom = routerPathArr.includes(val) ? false : true
-  fetch('https://node-server-demo-ten.vercel.app/').then((res) => res.json()).then(({ data }) => {
-    state.onLinNum = data
-  })
-  // val === '/' ? loadSakura() : loadPopper()
 },
   {
     flush: 'post',
+    deep: true,
+    immediate: true
+  })
+
+watch(() => window.onlineUsers, (val) => {
+  // console.log('监听到用户在线数量变化：', val)
+  state.onLinNum = val
+},
+  {
     deep: true,
     immediate: true
   })

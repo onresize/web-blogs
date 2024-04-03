@@ -2,6 +2,8 @@
 title: CSS概览
 lang: zh-CN
 sidebar: false
+contributors: false
+lastUpdated: false
 prev: 
 next: 
 feed:
