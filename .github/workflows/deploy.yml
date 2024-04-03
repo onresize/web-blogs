@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     name: StartServer
     steps:
-     - name: Checkout
+    - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0 
