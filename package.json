@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"node ./docs/.vuepress/public/server/app.js -w\" \"vuepress dev docs\"",
+    "dev": "concurrently \"yarn node-server\" \"vuepress dev docs\"",
     "clean-dev": "vuepress dev docs --clean-cache",
-    "build": "vuepress build docs && node ./docs/.vuepress/public/server/app.js -w",
+    "build": "vuepress build docs",
+    "node-server": "node ./docs/.vuepress/public/server/app.js -w",
     "update-package": "pnpm dlx vp-update"
   },
   "keywords": [
