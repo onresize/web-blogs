@@ -52,14 +52,31 @@ export default defineUserConfig({
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
     // 添加脚本
+    // [
+    //   'script',
+    //   {
+    //     src: '/web-blogs/static/js/busuanzi.pure.mini.js',
+    //     defer: true,
+    //   },
+    // ],
+    // googl分析
     [
       'script',
       {
-        src: '/web-blogs/static/js/busuanzi.pure.mini.js',
-        defer: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-P1NFFNHRH2',
+        async: true,
       },
     ],
-    // 百度统计
+    [
+      'script',
+      {},
+      `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P1NFFNHRH2');  
+    `,
+    ],
     [
       'script',
       {},

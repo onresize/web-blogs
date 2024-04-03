@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, watch, onMounted, onUnmounted } from 'vue'
+import { reactive, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { useRoute } from 'vue-router';
 import { Popper, PopperShape, MAX_Z_INDEX } from '@moefy-canvas/theme-popper'
@@ -11,6 +11,7 @@ console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: whi
 
 const state = reactive({
   showPageBottom: true,
+  onLinNum: 0
 })
 
 const loadScript = (url) => {
@@ -55,10 +56,14 @@ const loadPopper = () => {
 loadPopper()
 const route = useRoute()
 let routerPathArr = [encodeURI('/工作效率/HTML概览.html'), encodeURI('/工作效率/CSS概览.html')]
-watch(() => route.path, (val) => {
+watch(() => route.path, async (val) => {
   // console.log('监听route:', route)
-  loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
+  await nextTick()
+  // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
   state.showPageBottom = routerPathArr.includes(val) ? false : true
+  fetch('http://localhost:3999/').then((res) => res.json()).then(({ data }) => {
+    state.onLinNum = data
+  })
   // val === '/' ? loadSakura() : loadPopper()
 },
   {
@@ -66,6 +71,7 @@ watch(() => route.path, (val) => {
     deep: true,
     immediate: true
   })
+
 
 onMounted(() => { })
 
@@ -87,9 +93,16 @@ onUnmounted(() => {
   <ParentLayout>
     <template #page-bottom v-if="state.showPageBottom">
       <div class="my-footer">
+        <!-- RSS -->
         <!-- <a href="https://onresize.github.io/web-blogs/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
-        <span id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv"></span>
-          次</span>
+
+        <!-- 不蒜子访问量 -->
+        <!-- <div id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv">查询中</span>次</div> -->
+
+        <!-- 在线人数 -->
+        <div class="visit-text">
+          当前在线人数: <span style="color: #3eaf7c;" id="online_user">{{ state.onLinNum }}</span> 人
+        </div>
       </div>
     </template>
   </ParentLayout>
@@ -112,7 +125,8 @@ onUnmounted(() => {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 
   .icon-rss {
     width: 30px;

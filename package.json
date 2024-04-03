@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "concurrently \"node ./docs/.vuepress/public/server/app.js -w\" \"vuepress dev docs\"",
     "clean-dev": "vuepress dev docs --clean-cache",
-    "build": "vuepress build docs",
+    "build": "vuepress build docs && node ./docs/.vuepress/public/server/app.js -w",
     "update-package": "pnpm dlx vp-update"
   },
   "keywords": [
@@ -26,6 +26,8 @@
     "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-search": "2.0.0-rc.21",
     "@vuepress/theme-default": "2.0.0-rc.21",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
     "vue": "^3.4.21",
     "vuepress": "2.0.0-rc.9",
     "vuepress-plugin-cursor-effects": "^1.1.6",
