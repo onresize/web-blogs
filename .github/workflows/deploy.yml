@@ -61,4 +61,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: 启动node服务
-        run: node ./server/app.js
+        run: node /web-blogs/server/app.js
