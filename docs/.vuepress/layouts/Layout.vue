@@ -61,7 +61,7 @@ watch(() => route.path, async (val) => {
   await nextTick()
   // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
   state.showPageBottom = routerPathArr.includes(val) ? false : true
-  fetch('https://node-server-demo-q3fn5g8ak-onresize163coms-projects.vercel.app').then((res) => res.json()).then(({ data }) => {
+  fetch('https://node-server-demo-ten.vercel.app/').then((res) => res.json()).then(({ data }) => {
     state.onLinNum = data
   })
   // val === '/' ? loadSakura() : loadPopper()
