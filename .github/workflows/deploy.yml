@@ -61,4 +61,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: 执行打包
-        run: yarn node-server
+        run: node ./server/app.js
