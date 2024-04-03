@@ -60,25 +60,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # start node job
-  startServer:
-    needs: deploy
-    runs-on: ubuntu-latest
-    name: StartServer
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0 
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18.18.0
-        cache: yarn # or pnpm / yarn
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-    - name: 执行安装依赖
-      run: yarn # or pnpm install / yarn install / bun install
-    - name: start server
-      run: yarn node-server
