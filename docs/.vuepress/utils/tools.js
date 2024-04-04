@@ -1,13 +1,13 @@
 export const loopFps = () => {
   if (
-    null == window.localStorage.getItem('fpson') ||
-    '1' == window.localStorage.getItem('fpson')
+    null == globalThis.localStorage.getItem('fpson') ||
+    '1' == globalThis.localStorage.getItem('fpson')
   ) {
     var rAF =
-        window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
+        globalThis.requestAnimationFrame ||
+        globalThis.webkitRequestAnimationFrame ||
         function (e) {
-          window.setTimeout(e, 1e3 / 60)
+          globalThis.setTimeout(e, 1e3 / 60)
         },
       frame = 0,
       allFrameCount = 0,

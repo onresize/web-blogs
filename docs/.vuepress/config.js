@@ -71,7 +71,7 @@ export default defineUserConfig({
       'script',
       {},
       `
-      window.dataLayer = window.dataLayer || [];
+      globalThis.dataLayer = globalThis.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-P1NFFNHRH2');  
@@ -83,9 +83,9 @@ export default defineUserConfig({
       `
     var _hmt = _hmt || [];
     (function() {
-      var hm = document.createElement("script");
+      var hm = document?.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?9eb20a946f6ada6ace9bb2de590f8ed3";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document?.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();  
     `,

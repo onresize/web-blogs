@@ -15,46 +15,51 @@ const state = reactive({
   onLinNum: 0
 })
 
-const loadScript = (url) => {
-  const script = document.createElement('script')
-  script.type = 'text/javascript'
-  script.src = url
-  document.head.appendChild(script)
+let loadScript, loadSakura, loadPopper
+if (typeof globalThis.document !== 'undefined') {
+  const themeConfig = {
+    shape: PopperShape.Star,
+    size: 1.75,
+    numParticles: 10,
+  }
+
+  const canvasOptions = {
+    opacity: 1,
+    zIndex: MAX_Z_INDEX,
+  }
+  document = globalThis.document
+  const el = document?.createElement('canvas')
+  el.id = 'moefy-canvas'
+  document?.body.appendChild(el)
+  let popper = null, sakura = null
+
+  loadScript = (url) => {
+    const script = document?.createElement('script')
+    script.type = 'text/javascript'
+    script.src = url
+    document?.head.appendChild(script)
+  }
+
+  // 花瓣散落特效
+  loadSakura = () => {
+    popper?.unmount()
+    sakura = new Sakura({ numPatels: 30 }, canvasOptions)
+    sakura.mount(el)
+  }
+
+  // 点击颗粒特效
+  loadPopper = () => {
+    if (popper) return
+    sakura?.unmount()
+    sakura = null
+    popper = new Popper(themeConfig, canvasOptions)
+    popper.mount(el)
+  }
+
+  loadPopper()
 }
 
-const themeConfig = {
-  shape: PopperShape.Star,
-  size: 1.75,
-  numParticles: 10,
-}
 
-const canvasOptions = {
-  opacity: 1,
-  zIndex: MAX_Z_INDEX,
-}
-
-const el = document.createElement('canvas')
-el.id = 'moefy-canvas'
-document.body.appendChild(el)
-let popper = null, sakura = null
-
-// 花瓣散落特效
-const loadSakura = () => {
-  popper?.unmount()
-  sakura = new Sakura({ numPatels: 30 }, canvasOptions)
-  sakura.mount(el)
-}
-
-// 点击颗粒特效
-const loadPopper = () => {
-  if (popper) return
-  sakura?.unmount()
-  sakura = null
-  popper = new Popper(themeConfig, canvasOptions)
-  popper.mount(el)
-}
-
-loadPopper()
 const route = useRoute()
 let routerPathArr = [encodeURI('/工作效率/HTML概览.html'), encodeURI('/工作效率/CSS概览.html')]
 watch(() => route.path, async (val) => {
@@ -69,7 +74,7 @@ watch(() => route.path, async (val) => {
     immediate: true
   })
 
-watch(() => window.onlineUsers, (val) => {
+watch(() => globalThis.onlineUsers, (val) => {
   // console.log('监听到用户在线数量变化：', val)
   state.onLinNum = val
 },

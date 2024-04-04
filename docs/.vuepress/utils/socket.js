@@ -10,7 +10,7 @@ const socket = io('https://onresize.vercel.app:443', {
 
 // 显示用户数量的代码
 const userNumber = (num) => {
-  window.onlineUsers = num
+  globalThis.onlineUsers = num
 }
 
 // 手动断开连接
@@ -24,11 +24,11 @@ socket.on('connect', () => {
 })
 
 socket.on('disconnect', () => {
-  let count = window.onlineUsers - 1
-  window.onlineUsers = count < 0 ? 0 : count
-  // console.log('服务断开连接, 当前在线人数:', window.onlineUsers)
+  let count = globalThis.onlineUsers - 1
+  globalThis.onlineUsers = count < 0 ? 0 : count
+  // console.log('服务断开连接, 当前在线人数:', globalThis.onlineUsers)
   setTimeout(() => {
-    document.getElementById('online_user').innerText = window.onlineUsers
+    document.getElementById('online_user').innerText = globalThis.onlineUsers
   }, 0)
 })
 
