@@ -51,14 +51,6 @@ export default defineUserConfig({
   head: [
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
-    // 添加脚本
-    // [
-    //   'script',
-    //   {
-    //     src: '/web-blogs/static/js/busuanzi.pure.mini.js',
-    //     defer: true,
-    //   },
-    // ],
     // googl分析
     [
       'script',
