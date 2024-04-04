@@ -40,9 +40,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: 执行安装依赖
-        run: yarn # or pnpm install / yarn install / bun install
+        run: yarn 
       - name: 执行打包
-        run: yarn build # or pnpm docs:build / yarn docs:build / bun run docs:build
+        run: yarn build 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
