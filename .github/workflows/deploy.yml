@@ -26,25 +26,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 将代码仓库的内容拉取（或称为检出）到工作目录中，以便在下面的工作流程中使用
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      # - uses: pnpm/action-setup@v3 # Uncomment this if you're using pnpm
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+      # 安装 node 环境 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18.18.0
           cache: yarn # or pnpm / yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: 执行安装依赖
+      - name: 安装依赖
         run: yarn 
-      - name: 执行打包
+      - name: 打包
         run: yarn build 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v2
         with:
           path: docs/.vuepress/dist
 
@@ -57,6 +55,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 部署GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.ACTIONS_TOKEN }}
