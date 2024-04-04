@@ -16,7 +16,7 @@ const state = reactive({
 
 let loadScript, loadSakura, loadPopper
 let popper = null, sakura = null
-if (typeof globalThis.document !== 'undefined') {
+if (typeof globalThis?.document !== 'undefined') {
   const themeConfig = {
     shape: PopperShape.Star,
     size: 1.75,
@@ -27,7 +27,7 @@ if (typeof globalThis.document !== 'undefined') {
     opacity: 1,
     zIndex: MAX_Z_INDEX,
   }
-  document = globalThis.document
+
   const el = document?.createElement('canvas')
   el.id = 'moefy-canvas'
   document?.body.appendChild(el)
