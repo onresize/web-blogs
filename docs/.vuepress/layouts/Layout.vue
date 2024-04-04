@@ -14,49 +14,46 @@ const state = reactive({
   onLinNum: 0
 })
 
-let loadScript, loadSakura, loadPopper
-let popper = null, sakura = null
-if (typeof globalThis?.document !== 'undefined') {
-  const themeConfig = {
-    shape: PopperShape.Star,
-    size: 1.75,
-    numParticles: 10,
-  }
-
-  const canvasOptions = {
-    opacity: 1,
-    zIndex: MAX_Z_INDEX,
-  }
-
-  const el = document?.createElement('canvas')
-  el.id = 'moefy-canvas'
-  document?.body.appendChild(el)
-
-  loadScript = (url) => {
-    const script = document?.createElement('script')
-    script.type = 'text/javascript'
-    script.src = url
-    document?.head.appendChild(script)
-  }
-
-  // 花瓣散落特效
-  loadSakura = () => {
-    popper?.unmount()
-    sakura = new Sakura({ numPatels: 30 }, canvasOptions)
-    sakura.mount(el)
-  }
-
-  // 点击颗粒特效
-  loadPopper = () => {
-    if (popper) return
-    sakura?.unmount()
-    sakura = null
-    popper = new Popper(themeConfig, canvasOptions)
-    popper.mount(el)
-  }
-
-  loadPopper()
+const themeConfig = {
+  shape: PopperShape.Star,
+  size: 1.75,
+  numParticles: 10,
 }
+
+const canvasOptions = {
+  opacity: 1,
+  zIndex: MAX_Z_INDEX,
+}
+
+const el = document?.createElement('canvas')
+el.id = 'moefy-canvas'
+document?.body.appendChild(el)
+let popper = null, sakura = null
+
+const loadScript = (url) => {
+  const script = document?.createElement('script')
+  script.type = 'text/javascript'
+  script.src = url
+  document?.head.appendChild(script)
+}
+
+// 花瓣散落特效
+const loadSakura = () => {
+  popper?.unmount()
+  sakura = new Sakura({ numPatels: 30 }, canvasOptions)
+  sakura.mount(el)
+}
+
+// 点击颗粒特效
+const loadPopper = () => {
+  if (popper) return
+  sakura?.unmount()
+  sakura = null
+  popper = new Popper(themeConfig, canvasOptions)
+  popper.mount(el)
+}
+
+loadPopper()
 
 
 const route = useRoute()
@@ -69,15 +66,6 @@ watch(() => route.path, async (val) => {
 },
   {
     flush: 'post',
-    deep: true,
-    immediate: true
-  })
-
-watch(() => globalThis.onlineUsers, (val) => {
-  // console.log('监听到用户在线数量变化：', val)
-  state.onLinNum = val
-},
-  {
     deep: true,
     immediate: true
   })
@@ -107,7 +95,7 @@ onUnmounted(() => {
         <!-- <a href="https://onresize.github.io/web-blogs/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
 
         <!-- 不蒜子访问量 -->
-        <div id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv">查询中</span>次</div>
+        <div id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv">0</span>次</div>
       </div>
     </template>
   </ParentLayout>
