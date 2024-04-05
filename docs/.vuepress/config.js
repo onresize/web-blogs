@@ -51,6 +51,17 @@ export default defineUserConfig({
   head: [
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
+    // iframe优化
+    [
+      'link',
+      {
+        rel: 'preload',
+        href: 'https://onresize.github.io/react-ts-vite-admin/SandPack',
+        as: 'document',
+      },
+    ],
+    ['link', { rel: 'dns-prefetch', href: '//onresize.github.io' }],
+    ['link', { rel: 'preconnect', href: 'https://onresize.github.io' }],
     // googl分析
     [
       'script',
@@ -134,6 +145,6 @@ export default defineUserConfig({
     searchPlugin({
       // 排除首页
       isSearchable: (page) => page.path !== '/',
-    })
+    }),
   ],
 })
