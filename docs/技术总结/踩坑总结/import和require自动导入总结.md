@@ -139,7 +139,7 @@ requireComponents.keys().forEach(fileName => {
 
 
 
-- #### `当使用vite时, 使用 import.meta.globEager 自动导入`
+- #### `当使用vite时, 使用 import.meta.glob 自动导入`
 
 ```js
 // require 自动导入实现
@@ -154,7 +154,8 @@ export default modules;
 
 ```js
 // import 自动导入实现
-const files = import.meta.globEager("./*.ts")
+const files = import.meta.glob("./*.ts") // 异步加载
+// const files = import.meta.glob("./*.ts", { eager: true }) // 配置 {eager: true} 则为同步加载
 const modules: any = {};
 
 for (const key in files) {
@@ -164,3 +165,5 @@ for (const key in files) {
 }
 export default modules;
 ```
+
+- PS: 注意 `import.meta.globEager` 已经弃用，请使用 [import.meta.glob](https://cn.vitejs.dev/guide/migration-from-v2#importmetaglob) 来代替！

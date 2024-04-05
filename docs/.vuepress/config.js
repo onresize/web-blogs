@@ -134,6 +134,6 @@ export default defineUserConfig({
     searchPlugin({
       // 排除首页
       isSearchable: (page) => page.path !== '/',
-    }),
+    })
   ],
 })

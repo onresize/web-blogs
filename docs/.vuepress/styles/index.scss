@@ -1,5 +1,6 @@
 :root {
   scroll-behavior: smooth;
+  --content-width: 930px;
 }
 
 .AnLi {
@@ -27,7 +28,7 @@ pre::-webkit-scrollbar {
 }
 
 ::selection {
-  background: #807DD4;
+  background: #807dd4;
 }
 
 img {
