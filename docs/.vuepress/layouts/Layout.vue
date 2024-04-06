@@ -6,12 +6,14 @@ import { Popper, PopperShape, MAX_Z_INDEX } from '@moefy-canvas/theme-popper'
 import { Sakura } from '@moefy-canvas/theme-sakura'
 import Fps from '../components/Fps.vue'
 import { devDependencies } from '../../../package.json'
+import autoWriting from '../utils/print'
 
 console.log(`%cVuePress%c${devDependencies.vuepress}`, 'padding: 3px; color: white; background: #023047; border-radius: 5px 0 0 5px;', 'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;')
 
 const state = reactive({
   showPageBottom: true,
-  onLinNum: 0
+  onLinNum: 0,
+  showHeaderNavBar: true,
 })
 
 const themeConfig = {
@@ -59,16 +61,36 @@ loadPopper()
 const route = useRoute()
 let routerPathArr = [encodeURI('/工作效率/HTML概览.html'), encodeURI('/工作效率/CSS概览.html')]
 watch(() => route.path, async (val) => {
-  // console.log('监听route:', route)
+  // console.log('监听route.path:', val)
   await nextTick()
   loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
   state.showPageBottom = routerPathArr.includes(val) ? false : true
+  if (val === '/') {
+    state.showHeaderNavBar = true
+  } else {
+    state.showHeaderNavBar = false
+  }
 },
   {
     flush: 'post',
     deep: true,
     immediate: true
   })
+
+
+watch(() => route, async (to, from) => {
+  // console.log('路由信息：', from)
+  await nextTick()
+  if (!from || from.path === '/') {
+    autoWriting()
+  }
+},
+  {
+    flush: 'post',
+    deep: true,
+    immediate: true
+  })
+
 
 
 onMounted(() => { })
@@ -89,6 +111,10 @@ onUnmounted(() => {
   <Fps v-show="state.showPageBottom" />
 
   <ParentLayout>
+    <template #navbar>
+      <div v-if="state.showHeaderNavBar"></div>
+    </template>
+
     <template #page-bottom v-if="state.showPageBottom">
       <div class="my-footer">
         <!-- RSS -->
@@ -110,7 +136,7 @@ onUnmounted(() => {
 
 .my-footer {
   text-align: center;
-  width: 740px;
+  width: var(--content-width);
   height: 80px;
   margin: 10px auto;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
@@ -121,23 +147,23 @@ onUnmounted(() => {
   flex-wrap: wrap;
   align-content: center;
 
-  .icon-rss {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background: url('/RSS.png') no-repeat center center;
-    background-size: 100% 100%;
-    transition: .3s;
-
-    &:hover {
-      filter: drop-shadow(1rem 1rem 100px #3EAF7C);
-    }
-  }
-
   .visit-text {
     color: #ADBAC7;
     font-family: 'QT' !important;
     font-weight: bold !important;
+  }
+}
+
+.icon-rss {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: url('/RSS.png') no-repeat center center;
+  background-size: 100% 100%;
+  transition: .3s;
+
+  &:hover {
+    filter: drop-shadow(1rem 1rem 100px #3EAF7C);
   }
 }
 </style>

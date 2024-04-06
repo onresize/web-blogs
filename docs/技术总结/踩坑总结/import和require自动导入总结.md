@@ -100,7 +100,7 @@ export { default as B } from './b'
 
 
 
-### `6.require.context  和  import.meta.globEager 两种方式的自动导入`
+### `6.require.context  和  import.meta.glob 两种方式的自动导入`
 
 ```js
 require.context('@/components/view', false, /\.vue$/)

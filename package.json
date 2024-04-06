@@ -26,6 +26,7 @@
     "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-search": "2.0.0-rc.21",
     "@vuepress/theme-default": "2.0.0-rc.21",
+    "vite-plugin-compression": "^0.5.1",
     "vue": "^3.4.21",
     "vuepress": "2.0.0-rc.9",
     "vuepress-plugin-cursor-effects": "^1.1.6",

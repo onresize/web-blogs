@@ -5,6 +5,7 @@ import path from 'path'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
+import viteCompression from "vite-plugin-compression";
 import navbar from './config/navbar'
 import sidebar from './config/silder'
 
@@ -55,7 +56,7 @@ export default defineUserConfig({
     [
       'link',
       {
-        rel: 'preload',
+        rel: 'prefetch',
         href: 'https://onresize.github.io/react-ts-vite-admin/SandPack',
         as: 'document',
       },
@@ -138,13 +139,21 @@ export default defineUserConfig({
     navbar,
     sidebar,
 
-    editLink: false, // 是否启用 编辑此页 链接
+    editLink: true, // 是否启用 编辑此页 链接
+    editLinkText: '在 GitHub 上编辑此页',
   }),
 
   plugins: [
     searchPlugin({
-      // 排除首页
-      isSearchable: (page) => page.path !== '/',
+      isSearchable: (page) => page.path !== '/',  // 排除首页
+    }),
+    viteCompression({
+      verbose: true,
+      disable: false, // 不禁用压缩
+      deleteOriginFile: false, // 压缩后是否删除原文件
+      threshold: 10240, // 文件小于 10kb 不进行压缩
+      algorithm: "gzip", // 压缩算法
+      ext: ".gz" // 文件类型
     }),
   ],
 })
