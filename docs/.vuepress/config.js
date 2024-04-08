@@ -53,14 +53,6 @@ export default defineUserConfig({
     // 站点图标
     ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
     // iframe优化
-    [
-      'link',
-      {
-        rel: 'prefetch',
-        href: 'https://onresize.github.io/react-ts-vite-admin/SandPack',
-        as: 'document',
-      },
-    ],
     ['link', { rel: 'dns-prefetch', href: '//onresize.github.io' }],
     ['link', { rel: 'preconnect', href: 'https://onresize.github.io' }],
     // googl分析

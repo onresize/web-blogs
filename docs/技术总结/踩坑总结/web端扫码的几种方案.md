@@ -47,5 +47,5 @@ SSE：单向通信、只能服务端向客户端推送消息、因为流的本�
  - 客户端接收实时通知、警报、服务器监控状态、日志信息等、chatGPT有用到这种技术
 
 ##### PS:
- - http请求头必须是Content-Type: text/event-stream
- - 必须建立TCP长连接、即Connection：keep-alive
+ - http请求头必须是 `Content-Type: text/event-stream`
+ - 必须建立TCP长连接、即 `Connection：keep-alive`

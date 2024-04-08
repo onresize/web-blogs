@@ -146,7 +146,7 @@ git push -f
 ### `8.忽略pre-commit的提交规范约束`
 
 ```js
-// 当项目集成了 cz-git, husky 这种约定式规范提交信息、再终端用命令 git commit -m 的时候会被约束阻断 commit
+// 当项目集成了 cz-git, husky 这种约定式规范提交信息、在终端用命令 git commit -m 的时候会被约束阻断 commit
 git commit --no-verify -m '提交信息' // 会忽略规范提交的 pre-commit hook、进行提交
 ```
 
