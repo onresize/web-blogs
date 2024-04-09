@@ -22,7 +22,6 @@ description: React常用的内置hooks
 
 ### useImperativeHandle
 
-### useLayoutEffect
 ### useDebugValue
 ### useDeferredValue
 ### useTransition
