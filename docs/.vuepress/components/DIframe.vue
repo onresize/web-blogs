@@ -10,7 +10,7 @@ const props = defineProps({
  
 <template>
   <iframe :src="'https://onresize.github.io/react-ts-vite-admin/SandPack?codeType=' + props.iframeSrc" class="iframe-box"
-    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midipayment; usb; vr; xr-spatial-tracking"
+    title="page for document" loading="lazy" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midipayment; usb; vr; xr-spatial-tracking"
     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
 </template>
  
