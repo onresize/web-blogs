@@ -27,7 +27,7 @@ export const loopFps = () => {
           else if (o < 35) n = '<span style="color:#9338e6">不太流畅🙄</span>'
           else if (o <= 45) n = '<span style="color:#08b7e4">还不错哦😁</span>'
           else n = '<span style="color:#39c5bb">十分流畅🤣</span>'
-          ;(document.getElementById('fps').innerHTML = `FPS: ${o}🚀`),
+          ;(document.getElementById('fps').innerHTML = `FPS: ${o}`),
             (frame = 0),
             (lastTime = e)
         }

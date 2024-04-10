@@ -266,6 +266,19 @@ function identity<T>(arg: T): T {
 }
 identity<string>('玩转前端') // 这个T就是string，所以返回值必须得是string
 identity<number>(1)
+
+
+interface Identity {
+  length: number
+}
+
+function returnLength<T extends Identity> (arg: T): number {
+ return arg.length
+}
+
+returnLength('字符串的长度')
+returnLength(['1', '2', '3'])
+returnLength({ length: 100 })
 ```
 
 - #### `keyof`
