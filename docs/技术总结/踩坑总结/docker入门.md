@@ -103,3 +103,11 @@ server {
 </p>
 
 代码示例：[react-ts-vite-admin](https://github.com/onresize/react-ts-vite-admin)
+
+- #### 发布到[github packages](https://github.com/features/packages)
+- 先去设置github的token、在账户设置里面:『Github头像』->『Settings』->『Developer Settings』->『Personal access tokens』、选择 Tokens (classic)、至少勾选 `read:packages` 和 `write:packages` 权限
+- `执行以下命令`：
+- 1.登入： `docker login ghcr.io -u github用户名 -p 刚才获取的token`
+- 2.给镜像添加标签：`docker tag 镜像id ghcr.io/github用户名/镜像名:latest`、这里镜像id可以通过 `docker images` 查看
+- 3.发布到github packages：`docker push ghcr.io/github用户名/镜像名:latest`、latest为最新版本、也可自行设置版本号
+- 4.查看：访问 `https://github.com/github用户名?tab=packages`
