@@ -63,7 +63,7 @@ let routerPathArr = [encodeURI('/工作效率/HTML概览.html'), encodeURI('/工
 watch(() => route.path, async (val) => {
   // console.log('监听route.path:', val)
   await nextTick()
-  loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
+  // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
   state.showPageBottom = routerPathArr.includes(val) ? false : true
   if (val === '/') {
     state.showHeaderNavBar = true
@@ -116,13 +116,13 @@ onUnmounted(() => {
     </template>
 
     <template #page-bottom v-if="state.showPageBottom">
-      <div class="my-footer">
-        <!-- RSS -->
-        <!-- <a href="https://onresize.github.io/web-blogs/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
+      <!-- <div class="my-footer"> -->
+      <!-- RSS -->
+      <!-- <a href="https://onresize.github.io/web-blogs/rss.xml" title="订阅" target="_blank" class="icon-rss"></a> -->
 
-        <!-- 不蒜子访问量 -->
-        <div id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv">0</span>次</div>
-      </div>
+      <!-- 不蒜子访问量 -->
+      <!-- <div id="busuanzi_container_site_pv" class="visit-text">本站总访问量：<span id="busuanzi_value_site_pv">0</span>次</div> -->
+      <!-- </div> -->
     </template>
   </ParentLayout>
 </template>
