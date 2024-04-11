@@ -2,7 +2,7 @@
 home: true
 title: null
 heroText: .
-heroImage: /image.png
+heroImage: /image.webp
 tagline: 💻学习📝记录🔗分享
 actions:
   - text: ✨开始阅读 →

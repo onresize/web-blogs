@@ -13,3 +13,5 @@ description: iframe有什么问题
  - iframe是一种天然的沙箱、web容器
 
 - 增加使用体验、使用[iframe-resizer](https://github.com/davidjbradshaw/iframe-resizer)让第三方页面嵌入后、随着第三方页面自适应大小、同时还可以与其通信
+
+- 存在的问题：`前置缓存相关`, `非dom节点相关`, `样式处理相关`

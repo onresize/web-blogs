@@ -51,7 +51,7 @@ export default defineUserConfig({
 
   head: [
     // 站点图标
-    ['link', { rel: 'icon', href: '/web-blogs/image.png' }],
+    ['link', { rel: 'icon', href: '/web-blogs/webp.png' }],
     // iframe优化
     ['link', { rel: 'dns-prefetch', href: '//onresize.github.io' }],
     ['link', { rel: 'preconnect', href: 'https://onresize.github.io' }],
@@ -109,7 +109,7 @@ export default defineUserConfig({
 
   // 主题
   theme: defaultTheme({
-    logo: '/image.png',
+    logo: '/image.webp',
 
     lastUpdatedText: '上次更新',
     contributorsText: '贡献者',

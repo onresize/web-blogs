@@ -1010,3 +1010,107 @@ server {
 }
 ```
 :::
+
+
+### `8.一个nginx配置多个项目的几种方式`
+- 文件目录如下
+```text
+-----------------------
+|-- html
+|  |-- index.html
+|  |-- pc
+|  |  |-- dist1
+|  |  |  |-- index.html
+|  |  |-- dist2
+|  |  |  |-- index.html
+-----------------------
+```
+- 1. 同ip同端口、不同路径
+::: details
+```bash
+http {
+  server {
+    # 项目1
+    location / {
+      root html;
+      index index.html index.htm;
+    }
+
+    # 项目2
+    location /dist1 {
+      root html/pc;
+      try_files $uri $uri/ /dist1/index.html;
+      index index.html index.htm;
+    }
+
+    # 项目3
+    location /dist2 {
+      root html/pc;
+      try_files $uri $uri/ /dist2/index.html;
+      index index.html index.htm;
+    }
+  }
+}
+```
+:::
+
+- 2. 同ip、不同端口
+::: details
+```bash
+http {
+  server {
+    listen 8888;
+    server_name localhost;
+
+    location / {
+      root html/pc/dist1;
+      index index.html index.htm;
+    }
+  }
+
+  server {
+    listen 9999;
+    server_name localhost;
+
+    location / {
+      root html/pc/dist2;
+      index index.html index.htm;
+    }
+  }
+}
+```
+:::
+
+### `9.vite.config.js与nginx配置代理`
+- vite.config配置
+```bash
+server: {
+    port: 9090,
+    cors: true, // 默认启用并允许任何源
+    open: true, // 在服务器启动时自动在浏览器中打开应用程序
+    //反向代理配置，注意rewrite写法
+    proxy: {
+      "/api": {
+        target: "http://xx.xx.xx.x1:8090", //代理接口
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, "/api"),
+      },
+      "/web": {
+        target: "http://xx.xx.xx.x2:8090", //代理接口
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/web/, ""),
+      },
+    },
+  },
+```
+
+- nginx配置
+```bash 
+location ^~ /api/ {
+	proxy_pass http://xx.xx.xx.x1:8090/api/;  # 转发地址
+}
+		
+location ^~ /web/ {
+	proxy_pass http://xx.xx.xx.x2:8090/;  # 转发地址
+}
+```
