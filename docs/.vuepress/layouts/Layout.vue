@@ -69,7 +69,6 @@ watch(
     console.log('监听route.path:', decodeURI(val))
     await nextTick()
     state.showPageBottom = decodeURI(val).includes('/工具/') ? false : true
-    // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
     if (val === '/') {
       state.showHeaderNavBar = true
     } else {
@@ -99,7 +98,9 @@ watch(
   }
 )
 
-onMounted(() => {})
+onMounted(() => {
+  loadScript('/web-blogs/static/js/auto-upgrade.js')
+})
 
 onUnmounted(() => {
   popper?.unmount()
@@ -147,8 +148,10 @@ onUnmounted(() => {
 
 .my-footer {
   text-align: center;
-  width: var(--content-width);
-  height: 80px;
+  max-width: var(--content-width);
+  min-width: 366px;
+  width: 78%;
+  height: 60px;
   margin: 10px auto;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -166,8 +169,8 @@ onUnmounted(() => {
 }
 
 .icon-rss {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: inline-block;
   background: url('/RSS.png') no-repeat center center;
   background-size: 100% 100%;
