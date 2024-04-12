@@ -150,7 +150,7 @@ export default defineUserConfig({
     }),
     // RSS订阅源生成
     feedPlugin({
-      hostname: 'https://onresize.github.io/web-blogs/',
+      hostname: 'https://onresize.gitee.io/',
       atom: true,
       json: true,
       rss: true,
