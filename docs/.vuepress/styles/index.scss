@@ -50,3 +50,12 @@ img {
   // border: 1px solid #e4e7ed;
   // background-color: #ffffff;
 }
+
+.box-iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 3.6rem);
+  box-sizing: border-box;
+  border: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>JavaScript 压缩净化工具</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Javascript压缩" />
+    <meta name="keywords" content="Javascript压缩" />
+    <link rel="stylesheet" href="./css/packer.css" media="screen, projection" />
+  </head>
+  <body>
+    <div id="topWrap">
+      <div class="title">JavaScript 压缩净化工具</div>
+      <p class="self">
+        压缩和净化JavaScript、HTML、.NET、 perl 和 PHP 等等，提高加载速度。
+      </p>
+    </div>
+    <div class="clear"></div>
+    <div id="mainWrap">
+      <form class="" id="form" method="post">
+        <p>
+          <label class="paste"> 粘贴代码到这里 </label>
+          <br />
+          <textarea
+            spellcheck="false"
+            id="input"
+            name="input"
+            rows="30"
+            cols="80"
+          >
+          </textarea>
+        </p>
+
+        <p class="form-buttons" id="input-buttons">
+          <input
+            id="upload-script"
+            name="upload"
+            disabled="disabled"
+            type="file"
+          />
+          <button type="button" id="load-script">加载</button>
+          <button type="button" id="pack-script">压缩</button>
+          <button type="submit" id="save-script" disabled="disabled">
+            保存
+          </button>
+          <button type="button" id="decode-script" disabled="disabled">
+            解码
+          </button>
+          <button type="button" id="clear-all">清除</button>
+        </p>
+        <p id="controls">
+          <label for="base62">
+            Base62编码
+            <input id="base62" name="base62" value="1" type="checkbox" />
+          </label>
+          <label for="shrink">
+            收缩变量
+            <input id="shrink" name="shrink" value="1" type="checkbox" />
+          </label>
+        </p>
+        <p>
+          <textarea
+            spellcheck="false"
+            id="output"
+            name="output"
+            rows="30"
+            cols="80"
+            readonly="readonly"
+          >
+          </textarea>
+        </p>
+        <p id="message" class="">准备</p>
+        <p class="form-buttons" id="output-buttons"></p>
+      </form>
+
+      <div class="clear"></div>
+    </div>
+
+    <script type="text/javascript" src="./js/my.js"></script>
+    <script src="./js/Packer.js"></script>
+    <script src="./js/Words.js"></script>
+    <script src="./js/bindings.js"></script>
+    <script type="text/javascript" src="./js/textareaContent.js"></script>
+  </body>
+</html>

@@ -63,17 +63,13 @@ const loadPopper = () => {
 loadPopper()
 
 const route = useRoute()
-let routerPathArr = [
-  encodeURI('/工作效率/HTML概览.html'),
-  encodeURI('/工作效率/CSS概览.html'),
-]
 watch(
   () => route.path,
   async (val) => {
-    // console.log('监听route.path:', val)
+    console.log('监听route.path:', decodeURI(val))
     await nextTick()
+    state.showPageBottom = decodeURI(val).includes('/工具/') ? false : true
     // loadScript('/web-blogs/static/js/busuanzi.pure.mini.js') // 加载计数统计脚本
-    state.showPageBottom = routerPathArr.includes(val) ? false : true
     if (val === '/') {
       state.showHeaderNavBar = true
     } else {

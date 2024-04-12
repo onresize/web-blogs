@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "iconfont_flow"; /* Project id  */
+  src: url('iconfont.ttf?t=1657898714322') format('truetype');
+}
+
+.iconfont_flow {
+  font-family: "iconfont_flow" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bianji:before {
+  content: "\e620";
+}
+
+.icon-shanchu:before {
+  content: "\e602";
+}
+

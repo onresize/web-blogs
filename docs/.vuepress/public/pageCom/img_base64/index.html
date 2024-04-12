@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片转Base64</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+<div class="json_tools_outer">
+    <div class="header">图片转Base64
+        <button id="BTN" ref="mybtn">重置</button>
+    </div>
+    <div class="json_outer">
+        <div class="left">
+            <img :src="imgUrl" alt="" class="myimg" ref="myimg" v-show="imgUrl"/>
+            <input type="file" class="myupload" accept="image/*" ref="myupload">
+        </div>
+
+        <div class="right">
+            <textarea :value="base64Str"></textarea>
+        </div>
+    </div>
+</div>
+<script src="../common/vue.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
