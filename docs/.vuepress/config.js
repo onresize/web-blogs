@@ -5,7 +5,8 @@ import path from 'path'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
-import viteCompression from "vite-plugin-compression";
+import { feedPlugin } from '@vuepress/plugin-feed'
+import viteCompression from 'vite-plugin-compression'
 import navbar from './config/navbar'
 import sidebar from './config/silder'
 
@@ -137,15 +138,22 @@ export default defineUserConfig({
 
   plugins: [
     searchPlugin({
-      isSearchable: (page) => page.path !== '/',  // 排除首页
+      isSearchable: (page) => page.path !== '/', // 排除首页
     }),
     viteCompression({
       verbose: true,
       disable: false, // 不禁用压缩
       deleteOriginFile: false, // 压缩后是否删除原文件
       threshold: 10240, // 文件小于 10kb 不进行压缩
-      algorithm: "gzip", // 压缩算法
-      ext: ".gz" // 文件类型
+      algorithm: 'gzip', // 压缩算法
+      ext: '.gz', // 文件类型
+    }),
+    // RSS订阅源生成
+    feedPlugin({
+      hostname: 'https://onresize.github.io/web-blogs/',
+      atom: true,
+      json: true,
+      rss: true,
     }),
   ],
 })

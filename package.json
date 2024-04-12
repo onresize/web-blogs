@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx npm-only-allow@latest --PM pnpm",
     "dev": "vuepress dev docs",
     "clean-dev": "vuepress dev docs --clean-cache",
     "build": "vuepress build docs",
@@ -23,15 +24,21 @@
     "@moefy-canvas/theme-sakura": "^0.5.2",
     "@vuepress/bundler-vite": "2.0.0-rc.9",
     "@vuepress/bundler-webpack": "2.0.0-rc.9",
+    "@vuepress/plugin-feed": "2.0.0-rc.3",
     "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-search": "2.0.0-rc.21",
     "@vuepress/theme-default": "2.0.0-rc.21",
     "vite-plugin-compression": "^0.5.1",
     "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
     "vuepress": "2.0.0-rc.9",
     "vuepress-plugin-cursor-effects": "^1.1.6",
     "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-seo": "^0.2.0",
     "vuepress-plugin-sitemap": "^2.3.1"
+  },
+  "engines": {
+    "node": "v18.x",
+    "pnpm": "v8.15.x"
   }
 }

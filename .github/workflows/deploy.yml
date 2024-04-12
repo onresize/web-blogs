@@ -36,13 +36,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18.18.0
-          cache: yarn # or pnpm / yarn
+          cache: pnpm # or pnpm / yarn
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: 安装依赖
-        run: yarn 
+        run: pnpm i 
       - name: 打包
-        run: yarn build 
+        run: pnpm run build 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
