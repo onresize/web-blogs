@@ -52,7 +52,7 @@ export default defineUserConfig({
 
   head: [
     // 站点图标
-    ['link', { rel: 'icon', href: '/web-blogs/webp.png' }],
+    ['link', { rel: 'icon', href: '/web-blogs/image.webp' }],
     // iframe优化
     ['link', { rel: 'dns-prefetch', href: '//onresize.github.io' }],
     ['link', { rel: 'preconnect', href: 'https://onresize.github.io' }],
