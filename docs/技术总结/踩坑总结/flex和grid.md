@@ -38,3 +38,5 @@ description: flex和grid
 
 - ### `Grid属性`
 [Grid图形选择生成示例代码](https://tools.itsse.cn/cssgridgenerator/)
+
+[更多参考](https://www.yuque.com/guoqzuo/js_es6/kg7660)

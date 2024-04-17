@@ -66,7 +66,7 @@ const route = useRoute()
 watch(
   () => route.path,
   async (val) => {
-    console.log('监听route.path:', decodeURI(val))
+    // console.log('监听route.path:', decodeURI(val))
     await nextTick()
     state.showPageBottom = decodeURI(val).includes('/工具/') ? false : true
     if (val === '/') {

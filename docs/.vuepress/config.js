@@ -16,6 +16,13 @@ const tags = ['程序员', '编程', '前端']
 
 const isProd = process.env.NODE_ENV === 'production'
 
+function reWriteLog() {
+  console.log = (function (log) {
+    return isProd ? function () {} : log
+  })(console.log)
+}
+reWriteLog() // 线上重写console.log
+
 export default defineUserConfig({
   // 打包工具
   bundler: viteBundler({
