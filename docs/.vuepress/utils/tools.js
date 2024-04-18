@@ -36,3 +36,8 @@ export const loopFps = () => {
     loop()
   } else document.getElementById('fps').style = 'display:none!important'
 }
+
+export const rTime = (date) => {
+  let Time = new Date(Date.parse(date)).toLocaleString()
+  return Time
+}

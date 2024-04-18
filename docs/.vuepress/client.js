@@ -1,11 +1,13 @@
 import { defineClientConfig } from 'vuepress/client'
 import Layout from './layouts/Layout.vue'
+import FetchGithubCommit from './components/FetchGithubCommit.vue'
 import DynamicTitle from './components/DynamicTitle.vue'
 import DIframe from './components/DIframe.vue'
 
 // @see: https://v2.vuepress.vuejs.org/zh/advanced/cookbook/usage-of-client-config.html
 export default defineClientConfig({
   enhance({ app, router, siteData }) {
+    app.component('FetchGithubCommit', FetchGithubCommit)
     app.component('DynamicTitle', DynamicTitle)
     app.component('DIframe', DIframe)
   },

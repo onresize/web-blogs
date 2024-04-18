@@ -14,6 +14,27 @@ console.log(
   'padding: 3px; color: white; background: #219EBC;border-radius: 0 5px 5px 0;'
 )
 
+const username = 'onresize' // 替换为你的GitHub用户名
+const reponame = 'web-blogs' // 替换为你的仓库名
+const url = `https://api.github.com/repos/${username}/${reponame}/commits`
+const getCommit = () => {
+  fetch(url)
+    .then((response) => {
+      if (response.ok) {
+        return response.json()
+      }
+      throw new Error('Network response was not ok.')
+    })
+    .then((data) => {
+      let cacheList = data.slice(0, 10).map(({ commit }) => commit)
+      window.localStorage.setItem('cacheList', JSON.stringify(cacheList))
+    })
+    .catch((error) => {
+      console.error('Error fetching commits:', error)
+    })
+}
+getCommit()
+
 const state = reactive({
   showPageBottom: true,
   onLinNum: 0,

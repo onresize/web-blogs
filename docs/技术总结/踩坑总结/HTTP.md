@@ -52,4 +52,24 @@ description: HTTP
   | 数据重传     | 有                 | 有            |
   | 拥塞控制     | 有                 | 有            |
 
-  
+### `浏览器输入域名后的域名解析过程`  
+  - 当浏览器输入域名时、浏览器会先去解析域名、获取对应的ip地址、再去向这个ip发送请求
+  - 浏览器解析域名时、会先在本机上的hosts文件查找、如果找到了、就会向hosts文件中对应的ip地址发送请求
+  - 如果hosts文件找不到、就会向DNS发出域名解析的请求、再向DNS返回的ip地址发出请求
+- ##### 例：phpStudy开启nginx服务下创建的一个 `www.baidu.com` 的网站、如下图：
+<p align="center">
+  <img src="/AA_mdPics/server.min.png" />
+</p>
+
+- hosts文件下 `www.baidu.com` 自动对应了 `127.0.0.1` 这个ip
+<p align="center">
+  <img src="/AA_mdPics/host.min.png" />
+</p>
+
+- edge打开 `www.baidu.com` 的效果（注：不要挂梯子）
+<p align="center">
+  <img src="/AA_mdPics/edge.min.png" />
+</p>
+
+- 常用场景：客户端主机hosts文件添加对应的ip、自定义的域名映射关联、去访问内网网站
+- 总之：hosts文件主要用于自定义域名和ip地址之间的映射关系、比如：本地开发用域名测试联调、没有添加ip映射的主机起到网站屏蔽作用

@@ -235,7 +235,7 @@ mongoose: v8.3.1
 - MongoDB客户端下载地址：[MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 - #### 用 `docker-desktop` 拉取官方 `mongo` 镜像并按步骤运行
-- 下图步骤2、3分别是mongodb本地物理机存储路径、和映射挂载到容器的路径
+- 下图步骤2、3分别是mongodb的数据在本地物理机的存储路径、和映射挂载到容器中的路径
 <p align="center">
   <img src="/AA_mdPics/docker-compose.min.png" />
 </p>
