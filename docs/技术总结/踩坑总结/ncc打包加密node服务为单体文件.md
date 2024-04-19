@@ -10,11 +10,13 @@ description: ncc打包加密node服务为单体文件
 
 > 本文作者：[onresize](https://github.com/onresize)
 
-
 #### 用途
 
-- 加密打包、避免源码暴露
+> ncc 将 node 加密混淆打包
+[代码示例](https://gitee.com/onresize/mp4-to-hls-flv-server)
+- 加密混淆打包、避免源码暴露
 - 优点：单体文件、有node环境就能直接运行、不需要安装依赖
+
 
 #### 安装
 

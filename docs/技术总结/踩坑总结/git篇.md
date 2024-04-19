@@ -234,6 +234,9 @@ git config --global --get https.proxy
 // 取消代理
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+
+// git 无法将空文件夹上传至远程仓库
+// 解决办法：在空文件夹下创建一个 .gitkeep 空文件
 ```
 
 ### `11.git add常用命令`

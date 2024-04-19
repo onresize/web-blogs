@@ -15,7 +15,7 @@ description: docker前端篇
 <br />
 [Harbor私服镜像存储仓库](https://goharbor.io/)
 <br />
-[笔记参考](https://gitee.com/onresize/docker-compose)
+<!-- [笔记参考](https://gitee.com/onresize/docker-compose) -->
 
 > 本文针对前端开发做的一篇docker入门总结
 
@@ -203,6 +203,13 @@ EXPOSE 3000
 # 运行应用程序的命令
 CMD ["yarn", "koa"]
 ```
+Dockerfile 文件中指定的 WORKDIR /app其实就是这个构建的镜像中 node 项目源码的位置
+<br >
+注：有个应用场景、当前构建的这个 `node` 镜像是涵盖了当部署在服务器上运行的日志持久化文件在这个 `/app/logger/logs` 下、当程序出现问题时、这样就可以直接可以用 `docker desktop` 去查看图形化查看这个日志文件做排查
+<p align="center">
+  <img src="/AA_mdPics/docker2.min.png">
+</p>
+
 node程序中连接mongodb数据库的 `db.js` 文件
 ```js
 const Mongoose = require('mongoose')
