@@ -79,14 +79,17 @@ onUnmounted(() => {
 }
 
 .flex-box {
+  max-width: var(--content-width);
   width: 100%;
   height: 690px;
+  box-sizing: border-box;
   .box {
+    width: 100%;
     & + div {
       margin-top: 10px;
     }
     .item-row {
-      min-width: 400px;
+      min-width: 366px;
       height: 60px;
       padding: 10px;
       box-sizing: border-box;

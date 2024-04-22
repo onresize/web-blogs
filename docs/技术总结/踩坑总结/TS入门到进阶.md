@@ -33,6 +33,27 @@ arr.push('3')
 arr.push(false) // 报错、类型必须是 number | string
 ```
 
+- #### `枚举 (enum)`
+- 在TS中、可以用枚举定义类似boolean类型这样有限范围的值、enum可以定义多个有限的值
+```ts
+enum randomName {
+  name1,
+  name2,
+  name3: "王五",
+}
+
+function toChinese(val: randomName) {
+   switch (val) {
+    case randomName.name1:
+      return '张三';
+    case randomName.name2:
+      return '李四';
+  }
+}
+
+toChinese(randomName.name2)
+```
+
 - #### `联合类型`
 
 ```ts
