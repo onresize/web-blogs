@@ -10,6 +10,10 @@ export default [
       '/技术总结/踩坑总结/React常用的内置hooks',
       '/技术总结/踩坑总结/react的状态管理',
       '/技术总结/踩坑总结/vite搭建react项目样式隔离方案',
+      '/技术总结/踩坑总结/vue和react中的响应式区别',
+      '/技术总结/踩坑总结/vue相关',
+      '/技术总结/踩坑总结/url参数',
+      '/技术总结/踩坑总结/脚手架中的baseurl作用',
       '/技术总结/踩坑总结/TS入门到进阶',
       '/技术总结/踩坑总结/项目生成md目录树',
       '/技术总结/踩坑总结/CICD相关',
@@ -63,13 +67,13 @@ export default [
       '/算法学习/javascript专项练习',
     ],
   },
-  {
-    text: '🧑‍💻工具',
-    link: '/工具/',
-    collapsible: true,
-    children: [
-      '/工具/HTML概览',
-      '/工具/CSS概览',
-    ],
-  },
+  // {
+  //   text: '🧑‍💻工具',
+  //   link: '/工具/',
+  //   collapsible: true,
+  //   children: [
+  //     '/工具/HTML概览',
+  //     '/工具/CSS概览',
+  //   ],
+  // },
 ]

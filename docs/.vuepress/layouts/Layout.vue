@@ -199,6 +199,7 @@ onUnmounted(() => {
 
   &:hover {
     filter: drop-shadow(1rem 1rem 100px #3eaf7c);
+    transform: scale(1.1);
   }
 }
 </style>
