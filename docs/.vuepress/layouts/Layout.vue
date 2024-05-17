@@ -147,7 +147,7 @@ onUnmounted(() => {
       <div class="my-footer">
         <!-- RSS -->
         <a
-          href="https://onresize.gitee.io/web-blogs/rss.xml"
+          href="https://onresize.github.io/web-blogs/rss.xml"
           title="订阅"
           target="_blank"
           class="icon-rss"

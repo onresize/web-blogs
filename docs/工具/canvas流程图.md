@@ -19,5 +19,5 @@ import { h, ref, nextTick, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 
 const isProd = process.env.NODE_ENV === 'production'
-let iframeSrc = isProd ? 'https://onresize.gitee.io/web-blogs/pageCom/flow/index.html' : 'https://localhost:9008/web-blogs/pageCom/flow/index.html'
+let iframeSrc = isProd ? 'https://onresize.github.io/web-blogs/pageCom/flow/index.html' : 'https://localhost:9008/web-blogs/pageCom/flow/index.html'
 </script>

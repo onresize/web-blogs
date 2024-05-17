@@ -29,7 +29,7 @@ export default defineUserConfig({
     viteOptions: {
       server: {
         host: '0.0.0.0', // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
-        port: 9009,
+        port: 9008,
         open: false,
         strictPort: true, // 若端口已被占用则会直接退出
         cors: true, // 配置 CORS
@@ -157,7 +157,7 @@ export default defineUserConfig({
     }),
     // RSS订阅源生成
     feedPlugin({
-      hostname: 'https://onresize.gitee.io/',
+      hostname: 'https://onresize.github.io/',
       atom: true,
       json: true,
       rss: true,
