@@ -6,7 +6,7 @@ pages:
     stage: deploy
     environment: production
     before_script:
-        - pnpm -v
+        - npm -v
     script:
         - echo "开始执行脚本"
         - npm i pnpm
