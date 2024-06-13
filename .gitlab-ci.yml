@@ -1,14 +1,16 @@
 # The Docker image that will be used to build your app
-image: ccr.ccs.tencentyun.com/linux_environment/debian:1.0.0
+image: node:18
 # Functions that should be executed before the build script is run
 
 pages:
     stage: deploy
     environment: production
+    before_script:
+        - npm -v
     script:
         - echo "开始执行脚本"
-        - pnpm i 
-        - pnpm run build
+        - npm i 
+        - npm run build
     artifacts:
         paths:
             - public
