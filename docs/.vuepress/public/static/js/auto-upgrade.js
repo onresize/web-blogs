@@ -3,7 +3,11 @@
   s = document.createElement('script')
   s.type = 'text/javascript'
   s.id = 'version-polling'
-  s.src = '/web-blogs/static/js/version-polling.js'
+  s.src =
+    process.env?.repo === 'github'
+      ? '/web-blogs/static/js/version-polling.js'
+      : '/static/js/version-polling.js'
+
   t = document.getElementsByTagName('script')[0]
   t.parentNode.appendChild(s, t)
   s.onload = function () {
