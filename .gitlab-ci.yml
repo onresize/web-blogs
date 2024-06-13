@@ -6,11 +6,12 @@ pages:
     stage: deploy
     environment: production
     before_script:
-        - npm -v
+        - pnpm -v
     script:
         - echo "开始执行脚本"
-        - npm i 
-        - npm run build
+        - npm i pnpm
+        - pnpm i
+        - pnpm run build
     artifacts:
         paths:
             - public
