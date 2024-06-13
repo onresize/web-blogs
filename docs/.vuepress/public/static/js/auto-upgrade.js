@@ -3,8 +3,10 @@ void (function () {
   s = document.createElement('script')
   s.type = 'text/javascript'
   s.id = 'version-polling'
-  s.src =
-    'https://web-blogs-embrance-t-59e6df9d980ba7c216f8993005a68b570df639f055.gitlab.io/static/js/version-polling.js'
+
+  s.src = location.href.includes('github.io')
+    ? '/web-blogs/static/js/version-polling.js'
+    : '/static/js/version-polling.js'
 
   t = document.getElementsByTagName('script')[0]
   t.parentNode.appendChild(s, t)
