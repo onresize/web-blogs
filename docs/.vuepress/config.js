@@ -22,7 +22,7 @@ function reWriteLog() {
     return isProd ? function () {} : log
   })(console.log)
 }
-reWriteLog() // 线上重写console.log
+// reWriteLog() // 线上重写console.log
 
 export default defineUserConfig({
   // 打包工具
