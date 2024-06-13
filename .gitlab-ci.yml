@@ -7,9 +7,10 @@ pages:
     environment: production
     before_script:
         - npm -v
+        - npm i pnpm -g
     script:
         - echo "开始执行脚本"
-        - npm i pnpm
+        - pnpm -v
         - pnpm i
         - pnpm run build
     artifacts:
