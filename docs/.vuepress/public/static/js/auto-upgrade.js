@@ -1,8 +1,10 @@
-;(function () {
+void (function () {
   var s, t
   s = document.createElement('script')
   s.type = 'text/javascript'
   s.id = 'version-polling'
+  console.log('是否为github:', location.href.includes('github.io'))
+
   s.src = location.href.includes('github.io')
     ? '/web-blogs/static/js/version-polling.js'
     : '/static/js/version-polling.js'
