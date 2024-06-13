@@ -12,7 +12,7 @@ pages:
         - echo "开始执行脚本"
         - pnpm -v
         - pnpm i
-        - pnpm run build
+        - pnpm run build-gitlab
     artifacts:
         paths:
             - public

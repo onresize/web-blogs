@@ -15,6 +15,9 @@ const domain = 'https://onresize.github.io/web-blogs/'
 const tags = ['程序员', '编程', '前端']
 
 const isProd = process.env.NODE_ENV === 'production'
+const repo = process.env?.repo
+
+console.log('仓库:', repo)
 
 function reWriteLog() {
   console.log = (function (log) {
@@ -49,9 +52,9 @@ export default defineUserConfig({
     },
     vuePluginOptions: {},
   }),
-  dest: path.resolve(__dirname, '../../public'), // 指定 vuepress build 命令的输出目录
   // bundler: webpackBundler({}),
-  base: '/web-blogs/',
+  dest: repo === 'github' ? '/' : path.resolve(__dirname, '../../public'), // 指定 vuepress build 命令的输出目录
+  base: repo === 'github' ? '/web-blogs/' : '/',
 
   lang: 'zh-CN',
 
@@ -60,7 +63,13 @@ export default defineUserConfig({
 
   head: [
     // 站点图标
-    ['link', { rel: 'icon', href: '/web-blogs/image.webp' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: repo === 'github' ? '/web-blogs/image.webp' : '/image.webp',
+      },
+    ],
     // iframe优化
     ['link', { rel: 'dns-prefetch', href: '//onresize.github.io' }],
     ['link', { rel: 'preconnect', href: 'https://onresize.github.io' }],

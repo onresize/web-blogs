@@ -8,6 +8,8 @@
     "dev": "vuepress dev docs",
     "clean-dev": "vuepress dev docs --clean-cache",
     "build": "vuepress build docs",
+    "build-github": "node ./build/build.js --repo=github",
+    "build-gitlab": "node ./build/build.js --repo=gitlab",
     "update-package": "pnpm dlx vp-update"
   },
   "keywords": [
@@ -28,6 +30,7 @@
     "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-search": "2.0.0-rc.21",
     "@vuepress/theme-default": "2.0.0-rc.21",
+    "cross-spawn": "^7.0.3",
     "vite-plugin-compression": "^0.5.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",

@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 devDependencies:
   '@moefy-canvas/theme-popper':
     specifier: ^0.5.2
@@ -29,6 +25,9 @@ devDependencies:
   '@vuepress/theme-default':
     specifier: 2.0.0-rc.21
     version: 2.0.0-rc.21(vuepress@2.0.0-rc.9)
+  cross-spawn:
+    specifier: ^7.0.3
+    version: 7.0.3
   vite-plugin-compression:
     specifier: ^0.5.1
     version: 0.5.1(vite@5.2.9)
@@ -4941,3 +4940,7 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

@@ -44,7 +44,7 @@ jobs:
       - name: 安装依赖
         run: pnpm install 
       - name: 打包
-        run: pnpm run build 
+        run: pnpm run build-github 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
