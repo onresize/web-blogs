@@ -43,6 +43,6 @@ export default [
   },
   {
     text: '🚀国内镜像 🇨🇳',
-    link: 'https://onresize.gitee.io/web-blogs',
+    link: 'https://web-blogs-embrance-t-59e6df9d980ba7c216f8993005a68b570df639f055.gitlab.io/',
   },
 ]

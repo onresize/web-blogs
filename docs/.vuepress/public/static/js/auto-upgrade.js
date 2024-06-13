@@ -3,10 +3,9 @@
   s = document.createElement('script')
   s.type = 'text/javascript'
   s.id = 'version-polling'
-  s.src =
-    console.repo === 'github'
-      ? '/web-blogs/static/js/version-polling.js'
-      : '/static/js/version-polling.js'
+  s.src = location.href.includes('github.io')
+    ? '/web-blogs/static/js/version-polling.js'
+    : '/static/js/version-polling.js'
 
   t = document.getElementsByTagName('script')[0]
   t.parentNode.appendChild(s, t)
