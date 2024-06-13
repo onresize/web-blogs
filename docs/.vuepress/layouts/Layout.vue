@@ -120,7 +120,11 @@ watch(
 )
 
 onMounted(() => {
-  loadScript('/web-blogs/static/js/auto-upgrade.js')
+  loadScript(
+    process.env?.repo === 'github'
+      ? '/web-blogs/static/js/auto-upgrade.js'
+      : '/static/js/auto-upgrade.js'
+  )
 })
 
 onUnmounted(() => {
