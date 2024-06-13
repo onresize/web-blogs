@@ -25,6 +25,7 @@ function getArgs() {
 const { repo } = getArgs()
 
 process.env.repo = repo
+console.repo = repo
 
 const childProcess = spawn('npm', ['run', 'build'], { stdio: 'inherit' })
 // 监听子进程的 'close' 事件

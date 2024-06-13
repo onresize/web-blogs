@@ -17,8 +17,6 @@ const tags = ['程序员', '编程', '前端']
 const isProd = process.env.NODE_ENV === 'production'
 const repo = process.env?.repo
 
-console.log('仓库:', repo)
-
 function reWriteLog() {
   console.log = (function (log) {
     return isProd ? function () {} : log

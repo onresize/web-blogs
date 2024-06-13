@@ -119,9 +119,10 @@ watch(
   }
 )
 
+const repo = console?.repo || void 0
 onMounted(() => {
   loadScript(
-    process.env?.repo === 'github'
+    repo === 'github'
       ? '/web-blogs/static/js/auto-upgrade.js'
       : '/static/js/auto-upgrade.js'
   )

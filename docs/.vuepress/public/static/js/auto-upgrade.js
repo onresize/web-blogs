@@ -4,7 +4,7 @@
   s.type = 'text/javascript'
   s.id = 'version-polling'
   s.src =
-    process.env?.repo === 'github'
+    console.repo === 'github'
       ? '/web-blogs/static/js/version-polling.js'
       : '/static/js/version-polling.js'
 
