@@ -49,6 +49,7 @@ export default defineUserConfig({
     },
     vuePluginOptions: {},
   }),
+  dest: path.resolve(__dirname, '../../public'), // 指定 vuepress build 命令的输出目录
   // bundler: webpackBundler({}),
   base: '/web-blogs/',
 

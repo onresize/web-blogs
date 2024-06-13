@@ -125,3 +125,5 @@ yarn.lock
 package-lock.json
 
 /.npm-only-allow
+
+/public/
