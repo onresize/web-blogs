@@ -12,7 +12,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms1.png`,
+      }/AA_mdPics/ms1.png`,
       color: 'green',
     },
     {
@@ -22,7 +22,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms2.png`,
+      }/AA_mdPics/ms2.png`,
       color: 'red',
     },
     {
@@ -32,7 +32,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms3.png`,
+      }/AA_mdPics/ms3.png`,
       color: 'blue',
     },
     {
@@ -42,7 +42,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms4.png`,
+      }/AA_mdPics/ms4.png`,
       color: 'pink',
     },
     {
@@ -52,7 +52,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms5.png`,
+      }/AA_mdPics/ms5.png`,
     },
     {
       desc: '性能优化',
@@ -61,7 +61,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms6.png`,
+      }/AA_mdPics/ms6.png`,
       color: 'gray',
     },
     {
@@ -71,7 +71,7 @@ const timelineData = ref(
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
-      }'/AA_mdPics/ms7.png`,
+      }/AA_mdPics/ms7.png`,
     },
   ].reverse()
 )
