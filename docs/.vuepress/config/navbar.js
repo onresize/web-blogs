@@ -1,6 +1,6 @@
 export default [
   {
-    text: '🔨工具',
+    text: '🛠️工具',
     children: [
       {
         text: 'HTML概览',

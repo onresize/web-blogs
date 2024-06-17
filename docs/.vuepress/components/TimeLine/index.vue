@@ -55,13 +55,23 @@ const timelineData = ref(
       }/AA_mdPics/ms5.png`,
     },
     {
-      desc: '性能优化',
+      desc: '性能优化1',
       date: '2024/05/06',
       imgUrl: `${
         isProd
           ? 'https://onresize.github.io/web-blogs'
           : 'https://localhost:9008'
       }/AA_mdPics/ms6.png`,
+      color: 'gray',
+    },
+    {
+      desc: '性能优化2',
+      date: '2024/05/12',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }/AA_mdPics/ms8.png`,
       color: 'gray',
     },
     {
