@@ -3,6 +3,7 @@ import Layout from './layouts/Layout.vue'
 import FetchGithubCommit from './components/FetchGithubCommit.vue'
 import DynamicTitle from './components/DynamicTitle.vue'
 import DIframe from './components/DIframe.vue'
+import TimeLine from './components/TimeLine/index.vue'
 
 // @see: https://v2.vuepress.vuejs.org/zh/advanced/cookbook/usage-of-client-config.html
 export default defineClientConfig({
@@ -10,6 +11,7 @@ export default defineClientConfig({
     app.component('FetchGithubCommit', FetchGithubCommit)
     app.component('DynamicTitle', DynamicTitle)
     app.component('DIframe', DIframe)
+    app.component('TimeLine', TimeLine)
   },
   setup() {},
   layouts: {

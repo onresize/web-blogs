@@ -42,6 +42,10 @@ export default [
     link: '/技术总结/',
   },
   {
+    text: '🧐奇思妙想',
+    link: '/工具/奇思妙想/',
+  },
+  {
     text: '🚀国内镜像 🇨🇳',
     link: 'https://web-blogs-embrance-t-59e6df9d980ba7c216f8993005a68b570df639f055.gitlab.io/',
   },
