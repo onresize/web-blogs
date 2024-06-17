@@ -2,46 +2,61 @@
 import { ref } from 'vue'
 import Timeline from './TimeLine.vue'
 
+const isProd = process.env.NODE_ENV === 'production'
 const timelineData = ref([
   {
     desc: '原型链',
     date: '2023/03/10',
-    imgUrl: new URL('./imgs/ms1.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms1.png',
     color: 'green',
   },
   {
     desc: 'React 生命周期 v16.3 以前',
     date: '2023/07/19',
-    imgUrl: new URL('./imgs/ms2.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms2.png',
     color: 'red',
   },
   {
     desc: 'React 生命周期 only v16.3',
     date: '2023/11/07',
-    imgUrl: new URL('./imgs/ms3.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms3.png',
     color: 'blue',
   },
   {
     desc: 'setTimeout 和 setInterval 的区别',
     date: '2024/03/24',
-    imgUrl: new URL('./imgs/ms4.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms4.png',
     color: 'pink',
   },
   {
     desc: 'Service Worker的离线缓存',
     date: '2024/04/13',
-    imgUrl: new URL('./imgs/ms5.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms5.png',
   },
   {
     desc: '性能优化',
     date: '2024/05/06',
-    imgUrl: new URL('./imgs/ms6.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms6.png',
     color: 'gray',
   },
   {
     desc: '网络传输流程',
     date: '2024/06/17',
-    imgUrl: new URL('./imgs/ms7.png', import.meta.url).href,
+    imgUrl: isProd
+      ? 'https://onresize.github.io/web-blogs'
+      : 'https://localhost:9008' + '/AA_mdPics/ms7.png',
   },
 ])
 </script>

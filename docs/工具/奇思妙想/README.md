@@ -13,8 +13,3 @@ description: 奇思妙想
 ---
 
 <TimeLine />
-
-<script setup>
-import { h, ref, nextTick, watch, onMounted, onBeforeUnmount } from 'vue'
-import { useRoute } from 'vue-router'
-</script>
