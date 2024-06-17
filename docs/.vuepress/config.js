@@ -156,8 +156,8 @@ export default defineUserConfig({
       isSearchable: (page) => page.path !== '/', // 排除首页
     }),
     viteCompression({
-      verbose: true,
-      disable: false, // 不禁用压缩
+      verbose: true, // 是否在控制台输出压缩结果
+      disable: false, // 是否禁用
       deleteOriginFile: false, // 压缩后是否删除原文件
       threshold: 10240, // 文件小于 10kb 不进行压缩
       algorithm: 'gzip', // 压缩算法
