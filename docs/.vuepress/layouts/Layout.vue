@@ -36,8 +36,9 @@ const getCommit = () => {
 getCommit()
 
 const state = reactive({
-  showPageBottom: false,
+  showPageBottom: true,
   onLinNum: 0,
+  showHeaderNavBar: true,
 })
 
 const themeConfig = {
@@ -86,9 +87,15 @@ const route = useRoute()
 watch(
   () => route.path,
   async (val) => {
+    console.log('监听route.path:', decodeURI(val))
     await nextTick()
     state.showPageBottom = decodeURI(val).includes('/工具/') ? false : true
-    // console.log('监听route.path:', decodeURI(val), state.showPageBottom)
+    if (val === '/') {
+      state.showPageBottom = false
+      state.showHeaderNavBar = true
+    } else {
+      state.showHeaderNavBar = false
+    }
   },
   {
     flush: 'post',
@@ -137,8 +144,9 @@ onUnmounted(() => {
   <Fps v-show="state.showPageBottom" />
 
   <ParentLayout>
-    <!-- <template #navbar>
-    </template> -->
+    <template #navbar>
+      <div v-if="state.showHeaderNavBar"></div>
+    </template>
 
     <template #page-bottom v-if="state.showPageBottom">
       <div class="my-footer">
