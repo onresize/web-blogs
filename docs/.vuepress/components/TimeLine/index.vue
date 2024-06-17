@@ -8,56 +8,70 @@ const timelineData = ref(
     {
       desc: '原型链',
       date: '2023/03/10',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms1.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms1.png`,
       color: 'green',
     },
     {
       desc: 'React 生命周期 v16.3 以前',
       date: '2023/07/19',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms2.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms2.png`,
       color: 'red',
     },
     {
       desc: 'React 生命周期 only v16.3',
       date: '2023/11/07',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms3.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms3.png`,
       color: 'blue',
     },
     {
       desc: 'setTimeout 和 setInterval 的区别',
       date: '2024/03/24',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms4.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms4.png`,
       color: 'pink',
     },
     {
       desc: 'Service Worker的离线缓存',
       date: '2024/04/13',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms5.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms5.png`,
     },
     {
       desc: '性能优化',
       date: '2024/05/06',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms6.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms6.png`,
       color: 'gray',
     },
     {
       desc: '网络传输流程',
       date: '2024/06/17',
-      imgUrl: isProd
-        ? 'https://onresize.github.io/web-blogs'
-        : 'https://localhost:9008' + '/AA_mdPics/ms7.png',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }'/AA_mdPics/ms7.png`,
     },
   ].reverse()
 )
