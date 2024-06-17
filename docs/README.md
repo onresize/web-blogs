@@ -72,7 +72,8 @@ body {
   color: #f5f5f5 !important;
 }
 
-.feature > h2,p {
+.feature > h2,
+.feature > p {
   /* color: #96A7B7 !important; */
   color: #f5f5f5 !important;
 }
