@@ -6,7 +6,6 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { feedPlugin } from '@vuepress/plugin-feed'
-import viteCompression from 'vite-plugin-compression'
 import navbar from './config/navbar'
 import sidebar from './config/silder'
 
@@ -154,14 +153,6 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       isSearchable: (page) => page.path !== '/', // 排除首页
-    }),
-    viteCompression({
-      verbose: true, // 是否在控制台输出压缩结果
-      disable: false, // 是否禁用
-      deleteOriginFile: false, // 压缩后是否删除原文件
-      threshold: 10240, // 文件小于 10kb 不进行压缩
-      algorithm: 'gzip', // 压缩算法
-      ext: '.gz', // 文件类型
     }),
     // RSS订阅源生成
     feedPlugin({

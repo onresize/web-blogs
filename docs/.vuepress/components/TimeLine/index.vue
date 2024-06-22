@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import Timeline from './TimeLine.vue'
+import { initImage } from '../../utils/img-lazy.js'
 
 const isProd = process.env.NODE_ENV === 'production'
 const timelineData = ref(
@@ -85,7 +86,12 @@ const timelineData = ref(
     },
   ].reverse()
 )
+
+onMounted(() => {
+  initImage()
+})
 </script>
+
 <template>
   <div class="u-card">
     <Timeline
@@ -98,7 +104,7 @@ const timelineData = ref(
       <template #desc="{ row }">
         <span>{{ row.date }}</span>
         <div class="desc-card">
-          <img :src="row.imgUrl" alt="" />
+          <img :data-src="row.imgUrl" alt="img" />
         </div>
         <span class="mar-r">{{ row.desc }}</span>
       </template>
@@ -112,13 +118,20 @@ const timelineData = ref(
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  // height: calc(100vh - 58px);
+  overflow: hidden scroll;
+
   .desc-card {
-    padding: 10px 0 10px 10px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px 3px 10px;
     border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
   }
+
   img {
     border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
   }
 }
 </style>
