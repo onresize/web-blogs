@@ -119,11 +119,13 @@ onMounted(() => {
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden scroll;
+  height: calc(100vh - 58px);
 
   .desc-card {
     padding: 10px 10px 3px 10px;
     border-radius: 5px;
     box-sizing: border-box;
+    min-height: 250px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
   }
 
