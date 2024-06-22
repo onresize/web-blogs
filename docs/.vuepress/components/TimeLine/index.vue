@@ -118,7 +118,6 @@ onMounted(() => {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  // height: calc(100vh - 58px);
   overflow: hidden scroll;
 
   .desc-card {
