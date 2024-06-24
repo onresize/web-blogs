@@ -3,6 +3,10 @@ export default [
     text: '🛠️工具',
     children: [
       {
+        text: '前端开发规范指南',
+        link: 'https://github.com/onresize/LT-standard',
+      },
+      {
         text: 'HTML概览',
         link: '/工具/HTML概览',
       },
