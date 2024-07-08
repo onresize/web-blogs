@@ -70,6 +70,8 @@ body {
 #main-title {
   /* color: #ADBAC7 !important; */
   color: #f5f5f5 !important;
+  font-weight: 500 !important;
+  font-size: 2.3em !important;
 }
 
 .feature > h2,
