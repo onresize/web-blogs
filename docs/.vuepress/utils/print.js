@@ -82,13 +82,14 @@
 // }).print();
 
 const autoWriting = (index = 0) => {
-  let str = 'Hi there 👋, Welcome to my blog!'
+  let str = 'Hi there ✋, Welcome to my blog!'
   const dom = document.getElementById('main-title')
   let ret = ''
   if (index < str.length) {
-    ret += str[index]
-    if (!dom?.innerHTML) return
-    dom.innerHTML += ret
+    // ret += str[index]
+    ret += str.charAt(index)
+    if (!dom?.textContent) return
+    dom.textContent += ret
     setTimeout(autoWriting, 80, ++index)
   }
 }
