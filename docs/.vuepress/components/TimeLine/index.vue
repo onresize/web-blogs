@@ -84,6 +84,15 @@ const timelineData = ref(
           : 'https://localhost:9008'
       }/AA_mdPics/ms7.png`,
     },
+    {
+      desc: 'vue库推荐',
+      date: '2024/07/09',
+      imgUrl: `${
+        isProd
+          ? 'https://onresize.github.io/web-blogs'
+          : 'https://localhost:9008'
+      }/AA_mdPics/vue-ku.min.png`,
+    },
   ].reverse()
 )
 
