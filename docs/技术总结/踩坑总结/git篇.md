@@ -281,10 +281,22 @@ git remote rm github // 命令行的 github 为要删除的地址、也可以是
 
 ### `14.git flow 工作流`
 ```text
-// TODO
+# TODO
 ```
 
-- ### `Git GUI工具推荐`
+### `15.git推送github报错22、443端口问题`
+<p align="center">
+  <img src="/AA_mdPics/dl.png" />
+</p>
+
+```bash
+git config --global http.proxy http://127.0.0.1:23457
+git config --global https.proxy http://127.0.0.1:23457
+
+git config --list # 查看是否所有配置
+```
+
+### `16.Git GUI工具推荐`
   [sourceTree](https://www.sourcetreeapp.com/)&nbsp;
   [Github Desktop](https://desktop.github.com/)&nbsp;
   [Lazygit](https://github.com/jesseduffield/lazygit/releases)
