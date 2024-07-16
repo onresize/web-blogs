@@ -13,6 +13,8 @@ description: robots.txt文件防爬虫规则
 - robots.txt 是一种用于网站根目录的文本文件，其主要目的在于指示网络爬虫（web crawlers）和其他网页机器人（bots）哪些页面可以抓取，以及哪些页面不应该被抓取。可以看作是网站和搜索引擎机器人之间的一个协议。
 robots.txt 文件支持一系列规则，主要包括`User-agent`、`Disallow`、`Allow`和`Sitemap`。以下是这些规则的基础用法：
 
+[在线生成robots.txt](https://tool.ip138.com/robots/)
+
 #### 1. User-agent: 指定了这条规则对哪些机器人生效
 - `*` 代表这个规则对所有的机器人都有效。例如：
 ```text
