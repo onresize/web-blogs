@@ -284,7 +284,7 @@ git remote rm github // 命令行的 github 为要删除的地址、也可以是
 # TODO
 ```
 
-### `15.git推送github报错22、443端口问题`
+### `15.推送github报错22, 443端口问题`
 <p align="center">
   <img src="/AA_mdPics/dl.png" />
 </p>
@@ -294,9 +294,35 @@ git config --global http.proxy http://127.0.0.1:23457
 git config --global https.proxy http://127.0.0.1:23457
 
 git config --list # 查看是否所有配置
+# or
+git config -l
 ```
 
 ### `16.Git GUI工具推荐`
   [sourceTree](https://www.sourcetreeapp.com/)&nbsp;
   [Github Desktop](https://desktop.github.com/)&nbsp;
   [Lazygit](https://github.com/jesseduffield/lazygit/releases)
+
+### `17.Git LFS上传大文件`
+[安装包](https://git-lfs.com/)&nbsp;&nbsp;&nbsp;
+[视频教程](https://www.bilibili.com/video/BV19u411y7je)
+- 基本命令（根据需要依次执行）
+```bash
+git lfs install # 初始化
+
+git lfs track "*.zip" # 标记所有zip格式为LFS文件
+
+git lfs track "DEMO/*"  # 标记DEMO文件夹下的所有文件为LFS文件
+
+git lfs ls-files # 查看已经标记的文件
+
+git add .gitattributes # 添加确定跟踪 .gitattributes（配置文件，缺少它执行其他 git 操作可能会有问题）
+
+git push # commit成功然后push
+
+git lfs pull # 大文件下载
+```
+
+- 原由？ 解决git上传超过100MB问题
+- 方案1：ssh方式 + Git LFS
+- 方案2：http方式全局配置： `git config --global http.postBuffer 524288000` or 针对当前仓库配置：`git config http.postBuffer 524288000`
