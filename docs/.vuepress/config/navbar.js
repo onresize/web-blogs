@@ -58,7 +58,7 @@ export default [
     link: '/工具/性能优化/',
   },
   {
-    text: '🙈每日电影推荐',
+    text: '🙈电影日推',
     link: 'https://www.cikeee.cc/',
   },
   {

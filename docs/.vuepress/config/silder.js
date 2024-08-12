@@ -4,6 +4,7 @@ export default [
     link: '/技术总结/',
     collapsible: true,
     children: [
+      '/技术总结/踩坑总结/面试总结题',
       '/技术总结/踩坑总结/MIME类型',
       '/技术总结/踩坑总结/一个项目安装不同版本的依赖包',
       '/技术总结/踩坑总结/echarts两种渲染方式的应用场景',
