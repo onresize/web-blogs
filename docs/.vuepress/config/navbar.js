@@ -58,6 +58,10 @@ export default [
     link: '/工具/性能优化/',
   },
   {
+    text: '🙈每日电影推荐',
+    link: 'https://www.cikeee.cc/',
+  },
+  {
     text: '🚀国内镜像 🇨🇳',
     link: 'https://web-blogs-embrance-t-59e6df9d980ba7c216f8993005a68b570df639f055.gitlab.io/',
   },
