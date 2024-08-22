@@ -89,7 +89,7 @@ watch(
   async (val) => {
     console.log('监听route.path:', decodeURI(val))
     await nextTick()
-    state.showPageBottom = decodeURI(val).includes('/工具/') || decodeURI(val).includes('面试总结题.html') ? false : true
+    state.showPageBottom = decodeURI(val).includes('/工具/') || decodeURI(val).includes('总结题.html') ? false : true
     if (val === '/') {
       state.showPageBottom = false
       state.showHeaderNavBar = true

@@ -5,6 +5,7 @@ export default [
     collapsible: true,
     children: [
       '/技术总结/踩坑总结/面试总结题',
+      '/技术总结/踩坑总结/总结题',
       '/技术总结/踩坑总结/scp一键部署',
       '/技术总结/踩坑总结/MIME类型',
       '/技术总结/踩坑总结/script标签defer和async',
