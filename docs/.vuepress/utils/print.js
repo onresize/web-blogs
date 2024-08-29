@@ -82,7 +82,7 @@
 // }).print();
 
 const autoWriting = (index = 0) => {
-  let str = '保持对代码的敬畏, 保持对技术的热爱!'
+  let str = '不积跬步, 无以成江海!'
   const dom = document.getElementById('main-title')
   let ret = ''
   if (index < str.length) {
