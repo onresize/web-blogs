@@ -33,6 +33,10 @@ body {
   background: transparent !important;
 }
 
+.home .hero img {
+  filter: drop-shadow(0 0 .6em #A38034);
+}
+
 .home .features {
   /* border-top: 1px solid #eaecef !important; */
   border-top: 1px dashed rgba(0, 0, 0, 0.05) !important;
