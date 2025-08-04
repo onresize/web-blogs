@@ -12,6 +12,6 @@ description: 新颖的setTimeout替代方案
 
 - 限chrome 129版本以上
 
-<p align="center">
+<p align="center" style="border: 3px solid red; border-radius: 5px;">
   <img src="/AA_mdPics/scheduler.yield.png" />
 </p>
